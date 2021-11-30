@@ -9,19 +9,19 @@ export const Seo: FC = () => {
         noindex={false}
         nofollow={false}
         title="Wagumi DAO"
-        canonical="https://wagumi.lol"
-        description="Wagumi DAO - A cross-chain NFT experiment."
+        canonical="https://wagumi.xyz"
+        description="Wagumi DAO - A Japanese Web3 Community"
         openGraph={{
           locale: "en_US",
-          site_name: "wagumi.lol",
+          site_name: "wagumi.xyz",
           type: "website",
-          url: "https://www.wagumi.lol",
-          images: [{ url: "https://www.wagumi.lol/ogp.jpg" }],
+          url: "https://wagumi.lol",
+          images: [{ url: "https://wagumi.xyz/ogp.jpg" }],
         }}
         twitter={{
           cardType: "summary_large_image",
-          handle: "@wagumi",
-          site: "@wagumi",
+          handle: "@WagumiDAO",
+          site: "@WagumiDAO",
         }}
       />
       <Head>
