@@ -15,7 +15,7 @@ export const Seo: FC = () => {
           locale: "en_US",
           site_name: "wagumi.xyz",
           type: "website",
-          url: "https://wagumi.lol",
+          url: "https://wagumi.xyz",
           images: [{ url: "https://wagumi.xyz/ogp.jpg" }],
         }}
         twitter={{
