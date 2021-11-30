@@ -16,7 +16,7 @@ export const Seo: FC = () => {
           site_name: "wagumi.xyz",
           type: "website",
           url: "https://wagumi.xyz",
-          images: [{ url: "https://wagumi.xyz/ogp.jpg" }],
+          images: [{ url: "https://wagumi.xyz/ogp.png" }],
         }}
         twitter={{
           cardType: "summary_large_image",

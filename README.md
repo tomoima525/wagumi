@@ -1,3 +1,3 @@
 # wagmi
 
-![!image](/assets/ogp.jpg)
+![!image](/assets/wagumi.png)
