@@ -16,7 +16,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "start": "next start"
+    "export": "next export"
   },
   "dependencies": {
     "@react-three/fiber": "^7.0.17",
