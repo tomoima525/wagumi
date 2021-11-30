@@ -1,1 +1,3 @@
-# wagumi
+# wagmi
+
+![!image](/assets/ogp.jpg)
