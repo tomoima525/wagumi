@@ -3,4 +3,5 @@
  */
 module.exports = {
   presets: [require("../../next.config")],
+  basePath: "/wagumi",
 };
