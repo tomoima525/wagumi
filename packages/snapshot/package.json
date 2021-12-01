@@ -1,0 +1,30 @@
+{
+  "name": "@wagumi/snapshot",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Snapshot for Wagumi DAO",
+  "homepage": "https://wagumi.xyz",
+  "bugs": {
+    "url": "https://github.com/wagumi/wagumi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wagumi/wagumi.git"
+  },
+  "license": "MIT",
+  "author": "Wagumi DAO",
+  "main": "dist/index",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon src/index.ts",
+    "start": "node ."
+  },
+  "dependencies": {
+    "discord.js": "^13.3.1",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0"
+  }
+}
