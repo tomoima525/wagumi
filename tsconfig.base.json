@@ -8,6 +8,8 @@
     "module": "commonjs",
     "outDir": "./dist",
     "paths": {
+      "@/airdrop/*": ["./packages/airdrop/src/*"],
+      "@/airdrop/public/*": ["./packages/airdrop/public/*"],
       "@/artifacts/*": ["./packages/contracts/artifacts/*"],
       "@/cats/*": ["./packages/cats/src/*"],
       "@/cats/public/*": ["./packages/cats/public/*"],
