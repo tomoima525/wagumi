@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/wagumi/wagumi.git"
   },
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "author": "Wagumi DAO",
   "workspaces": {
     "packages": [
