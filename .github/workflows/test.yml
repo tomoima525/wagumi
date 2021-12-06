@@ -15,4 +15,5 @@ jobs:
       - uses: ./.github/actions/yarn
       - working-directory: packages/contracts
         run: |
+          yarn run compile
           yarn run test
