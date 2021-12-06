@@ -71,7 +71,7 @@ const config: HardhatUserConfig = {
     deployments: "deployments",
     imports: "imports",
     sources: "contracts",
-    tests: "test",
+    tests: "tests",
   },
   abiExporter: {
     path: "./abi",
