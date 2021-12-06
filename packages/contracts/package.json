@@ -63,7 +63,8 @@
     "hardhat-gas-reporter": "^1.0.4",
     "hardhat-preprocessor": "^0.1.4",
     "hardhat-spdx-license-identifier": "^2.0.3",
-    "hardhat-watcher": "^2.1.1"
+    "hardhat-watcher": "^2.1.1",
+    "solc": "^0.8.9"
   },
   "devDependencies": {
     "@float-capital/solidity-coverage": "^0.7.17",
