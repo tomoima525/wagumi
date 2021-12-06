@@ -2,7 +2,7 @@
   "name": "@wagumi/cats",
   "version": "1.0.0",
   "private": false,
-  "description": "Home for Wagumi DAO",
+  "description": "Cats NFT Collection for Wagumi DAO",
   "homepage": "https://cats.wagumi.xyz",
   "bugs": {
     "url": "https://github.com/wagumi/wagumi/issues"
