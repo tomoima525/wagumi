@@ -1,9 +1,9 @@
 {
-  "name": "@wagumi/home",
+  "name": "@wagumi/cats",
   "version": "1.0.0",
   "private": false,
   "description": "Home for Wagumi DAO",
-  "homepage": "https://www.wagumi.xyz",
+  "homepage": "https://cats.wagumi.xyz",
   "bugs": {
     "url": "https://github.com/wagumi/wagumi/issues"
   },
