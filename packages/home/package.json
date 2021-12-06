@@ -16,7 +16,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "export": "next export"
+    "start": "next start"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.3.0",
