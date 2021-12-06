@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract TestToken is ERC721, ReentrancyGuard, Ownable {
+contract NFT is ERC721, ReentrancyGuard, Ownable {
   using Counters for Counters.Counter;
 
   constructor (string memory customBaseURI_) ERC721("Wagumi Cats", "WAGUMI") {
