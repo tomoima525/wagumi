@@ -1,8 +1,13 @@
-name: Pages
+name: Check
 on:
   push:
+    branches:
+      - alpha
+      - beta
+      - main
+  pull_request:
 jobs:
-  pages:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
