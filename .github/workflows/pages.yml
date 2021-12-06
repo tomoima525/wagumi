@@ -1,17 +1,12 @@
 name: Pages
-
 on:
   push:
-    branches:
-      - main
 jobs:
   pages:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-      - run: |
-          yarn install --frozen-lockfile
+      - uses: ./.github/actions/yarn
       - working-directory: packages/home
         run: |
           yarn run build

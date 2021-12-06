@@ -1,3 +1,3 @@
-# wagmi
+# wagumi
 
 ![!image](/assets/wagumi.png)
