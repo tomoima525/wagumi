@@ -1,11 +1,6 @@
 name: Check
 on:
   push:
-    branches:
-      - alpha
-      - beta
-      - main
-  pull_request:
 jobs:
   check:
     runs-on: ubuntu-latest
