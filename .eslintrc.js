@@ -30,6 +30,7 @@ module.exports = {
     jsdom: true,
     JSX: true,
   },
+  ignorePatterns: ["**/contracts/*.sol"],
   overrides: [
     {
       files: ["*.js", "*.jsx"],
