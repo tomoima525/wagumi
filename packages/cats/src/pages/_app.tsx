@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 // import Script from "next/script";
 
 import "tailwindcss/tailwind.css";
-import { Seo } from "@/home/components/Seo";
+import { Seo } from "@/cats/components/Seo";
 
 const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (

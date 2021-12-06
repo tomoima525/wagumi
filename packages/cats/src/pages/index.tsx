@@ -1,6 +1,6 @@
-import { FooterLogo } from "@/home/components/FooterLogo";
-import { GlowLogo } from "@/home/components/GlowLogo";
-import { DISCORD_URL, GITHUB_URL, TWITTER_URL } from "@/home/const/config";
+import { FooterLogo } from "@/cats/components/FooterLogo";
+import { GlowLogo } from "@/cats/components/GlowLogo";
+import { DISCORD_URL, GITHUB_URL, TWITTER_URL } from "@/cats/const/config";
 
 export const IndexPage = (): JSX.Element => {
   return (

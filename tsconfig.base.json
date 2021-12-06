@@ -9,6 +9,8 @@
     "outDir": "./dist",
     "paths": {
       "@/artifacts/*": ["./packages/contracts/artifacts/*"],
+      "@/cats/*": ["./packages/cats/src/*"],
+      "@/cats/public/*": ["./packages/cats/public/*"],
       "@/deployments/*": ["./packages/contracts/deployments/*"],
       "@/home/*": ["./packages/home/src/*"],
       "@/home/public/*": ["./packages/home/public/*"],
