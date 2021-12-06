@@ -6,13 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-        id: nvm
-      - uses: actions/setup-node@v1
-        with:
-          node-version: ${{ steps.nvm.outputs.NVMRC }}
-      - run: |
-          yarn install --frozen-lockfile
+      - uses: ./.github/actions/yarn
       - working-directory: packages/home
         run: |
           yarn run build
