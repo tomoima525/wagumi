@@ -8,8 +8,11 @@
     "module": "commonjs",
     "outDir": "./dist",
     "paths": {
+      "@/artifacts/*": ["./packages/contracts/artifacts/*"],
+      "@/deployments/*": ["./packages/contracts/deployments/*"],
       "@/home/*": ["./packages/home/src/*"],
-      "@/home/public/*": ["./packages/home/public/*"]
+      "@/home/public/*": ["./packages/home/public/*"],
+      "@/typechain/*": ["./packages/contracts/typechain/*"]
     },
     "sourceMap": true,
     "strict": true,
