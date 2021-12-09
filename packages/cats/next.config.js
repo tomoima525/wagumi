@@ -14,9 +14,9 @@ module.exports = {
       ],
       fallback: [
         {
-          source: "/:slug",
+          source: "/:slug*",
           destination:
-            "https://media.githubusercontent.com/media/wagumi/wagumi/main/generated/:slug",
+            "https://media.githubusercontent.com/media/wagumi/wagumi/main/generated/:slug*",
         },
       ],
     };
