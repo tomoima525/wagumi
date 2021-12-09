@@ -12,13 +12,6 @@ module.exports = {
             "https://media.githubusercontent.com/media/wagumi/wagumi/main/generated/:slug.png",
         },
       ],
-      fallback: [
-        {
-          source: "/:slug(\\d{1,3}.\\(png\\)",
-          destination:
-            "https://media.githubusercontent.com/media/wagumi/wagumi/main/generated/:slug",
-        },
-      ],
     };
   },
 };
