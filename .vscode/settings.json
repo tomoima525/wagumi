@@ -1,4 +1,5 @@
 {
+  "explorer.autoReveal": false,
   "solidity.enabledAsYouTypeCompilationErrorCheck": true,
   "solidity.linter": "solhint",
   "solidity.packageDefaultDependenciesContractsDirectory": "",
