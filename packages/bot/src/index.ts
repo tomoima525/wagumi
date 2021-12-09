@@ -1,16 +1,10 @@
 import { writeFile } from "fs";
 
-import { Client, Intents } from "discord.js";
+import { Client } from "discord.js";
 
 import "dotenv/config";
 
-const client = new Client({
-  intents: [
-    Intents.FLAGS.GUILDS,
-    Intents.FLAGS.GUILD_MESSAGES,
-    Intents.FLAGS.GUILD_MEMBERS,
-  ],
-});
+const client = new Client();
 
 export const GUILD_ID = "914960638365810748";
 
