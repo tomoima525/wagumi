@@ -5,7 +5,7 @@
     "esModuleInterop": true,
     "module": "commonjs",
     "outDir": "./dist",
-    "rootDirs": ["./deploy", "./tasks", "./tests", "./types", "./scripts"],
+    "rootDirs": ["./deploy", "./scripts", "./tasks", "./tests", "./typechain"],
     "sourceMap": true,
     "strict": true,
     "target": "ES2017",
@@ -18,8 +18,7 @@
     "./deploy",
     "./scripts",
     "./tasks",
-    "./tests",
-    "./types",
+    "./typechain",
     "./hardhat.config.ts"
   ]
 }
