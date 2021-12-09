@@ -40,7 +40,8 @@
     "prettier:lint": "yarn run prettier:cmd --check .",
     "postpublish": "pinst --enable",
     "release": "semantic-release",
-    "release:check": "semantic-release --dry-run"
+    "release:check": "semantic-release --dry-run",
+    "test": "turbo run test"
   },
   "npmpackagejsonlint": {
     "extends": "npm-package-json-lint-config-default"
