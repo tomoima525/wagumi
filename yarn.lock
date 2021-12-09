@@ -1682,10 +1682,10 @@
   dependencies:
     ethers "^5.0.2"
 
-"@typechain/ethers-v5@^8.0.1":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@typechain/ethers-v5/-/ethers-v5-8.0.1.tgz#26d8a8aa53524865aff62cd68a77329664a390a4"
-  integrity sha512-HFYlrdZWkKtuRjkKAZFY8WU7hcW0HPlDaQEX1W0Qo2VvpE7eCzhM4BcEGycjisKcBeb03fXMoBtHVcO1rZ9e9A==
+"@typechain/ethers-v5@^8.0.5":
+  version "8.0.5"
+  resolved "https://registry.yarnpkg.com/@typechain/ethers-v5/-/ethers-v5-8.0.5.tgz#d469420e9a73deb7fa076cde9edb45d713dd1b8c"
+  integrity sha512-ntpj4cS3v4WlDu+hSKSyj9A3o1tKtWC30RX1gobeYymZColeJiUemC1Kgfa0MWGmInm5CKxoHVhEvYVgPOZn1A==
   dependencies:
     lodash "^4.17.15"
     ts-essentials "^7.0.1"
@@ -1716,10 +1716,15 @@
   dependencies:
     "@types/node" "*"
 
-"@types/chai@*", "@types/chai@^4.2.22":
+"@types/chai@*":
   version "4.2.22"
   resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.2.22.tgz#47020d7e4cf19194d43b5202f35f75bd2ad35ce7"
   integrity sha512-tFfcE+DSTzWAgifkjik9AySNqIyNoYwmR+uecPwwD/XRNfvOjmC/FjCxpiUGDkDVDphPfCUecSQVFw+lN3M3kQ==
+
+"@types/chai@^4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.3.0.tgz#23509ebc1fa32f1b4d50d6a66c4032d5b8eaabdc"
+  integrity sha512-/ceqdqeRraGolFTcfoXNiqjyQhZzbINDngeoAq9GoHa8PPK1yNzTaxWjA6BFWp5Ua9JpXEMSS4s5i9tS0hOJtw==
 
 "@types/concat-stream@^1.6.0":
   version "1.6.1"
@@ -1817,10 +1822,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.20.37.tgz#abb38afa9d6e8a2f627a8cb52290b3c80fbe61ed"
   integrity sha512-i1KGxqcvJaLQali+WuypQnXwcplhtNtjs66eNsZpp2P2FL/trJJxx/VWsM0YCL2iMoIJrbXje48lvIQAQ4p2ZA==
 
-"@types/node@^16.11.11":
-  version "16.11.11"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.11.tgz#6ea7342dfb379ea1210835bada87b3c512120234"
-  integrity sha512-KB0sixD67CeecHC33MYn+eYARkqTheIRNuu97y2XMjR7Wu3XibO1vaY6VBV6O/a89SPI81cEUIYT87UqUWlZNw==
+"@types/node@^16.11.12":
+  version "16.11.12"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.12.tgz#ac7fb693ac587ee182c3780c26eb65546a1a3c10"
+  integrity sha512-+2Iggwg7PxoO5Kyhvsq9VarmPbIelXP070HMImEpbtGCoyWNINQj4wzjbQCXzdHTRXnqufutJb5KAURZANNBAw==
 
 "@types/node@^8.0.0":
   version "8.10.66"
@@ -6302,7 +6307,7 @@ ethers@^4.0.32, ethers@^4.0.40:
     uuid "2.0.1"
     xmlhttprequest "1.8.0"
 
-ethers@^5.0.1, ethers@^5.0.2, ethers@^5.4.7, ethers@^5.5.1:
+ethers@^5.0.1, ethers@^5.0.2, ethers@^5.4.7, ethers@^5.5.2:
   version "5.5.2"
   resolved "https://registry.yarnpkg.com/ethers/-/ethers-5.5.2.tgz#cd2e508c7342c44fa70392f722e8de8f2416489f"
   integrity sha512-EF5W+6Wwcu6BqVwpgmyR5U2+L4c1FQzlM/02dkZOugN3KF0cG9bzHZP+TDJglmPm2/IzCEJDT7KBxzayk7SAHw==
@@ -7545,7 +7550,7 @@ hardhat-watcher@^2.1.1:
   dependencies:
     chokidar "^3.4.3"
 
-hardhat@^2.6.8:
+hardhat@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/hardhat/-/hardhat-2.7.0.tgz#d8f01bc07bdd88ccaa00719ddb18618bc59a73b5"
   integrity sha512-DqweY3KH5gwExoZ8EtsAfioj0Hk0NBXWXT3fMXWkiQNfyYBoZLrqdPNkbJ/E2LD4mZ+BKF7v/1chYR9ZCn2Z+g==
