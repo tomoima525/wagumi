@@ -105,15 +105,7 @@
         "dependsOn": [
           "build"
         ]
-      },
-      "deploy": {
-        "dependsOn": [
-          "build",
-          "test",
-          "lint"
-        ]
-      },
-      "lint": {}
+      }
     }
   }
 }
