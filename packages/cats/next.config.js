@@ -7,7 +7,8 @@ module.exports = {
     return [
       {
         source: "/:slug(\\d{1,})",
-        destination: "/:slug.png",
+        destination:
+          "https://media.githubusercontent.com/media/wagumi/wagumi/main/generated/:slug.png",
       },
     ];
   },
