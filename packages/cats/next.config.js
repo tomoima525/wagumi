@@ -10,6 +10,11 @@ module.exports = {
         destination:
           "https://media.githubusercontent.com/media/wagumi/wagumi/main/generated/:slug.png",
       },
+      {
+        source: "/:slug",
+        destination:
+          "https://media.githubusercontent.com/media/wagumi/wagumi/main/generated/:slug",
+      },
     ];
   },
 };
