@@ -7,9 +7,9 @@ interface FooterIconLinkProps {
 }
 
 interface FooterLogoProps {
-  discord?: string;
-  github?: string;
-  twitter?: string;
+  discord: string;
+  github: string;
+  twitter: string;
 }
 
 export const FooterIconLink: FC<FooterIconLinkProps> = ({ children, href }) => {
