@@ -1,3 +1,5 @@
+[![Test](https://github.com/wagumi/wagumi/actions/workflows/test.yml/badge.svg)](https://github.com/wagumi/wagumi/actions/workflows/test.yml)
+
 # wagumi
 
 ![!image](/assets/wagumi.png)
