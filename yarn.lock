@@ -13809,10 +13809,10 @@ tailwindcss@^2.1.2:
     resolve "^1.20.0"
     tmp "^0.2.1"
 
-tailwindcss@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.0.tgz#f7dfd30996b3b1a84d656aaf3c8b6810b70d3d42"
-  integrity sha512-UPAp2PS5vojAvGClJFIkdh2hfFyaSWo09Ma9j2vZYW+ANhTvpUHFjY85JgtrvvXXREtDvOXy2BxW1yHOz8apCg==
+tailwindcss@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.1.tgz#bef72ff45d5cfed79bb648d30da952e521e98da4"
+  integrity sha512-EVDXVZkcueZ77/zfOJw7XkzCuxe5TCiT/S9pw9P183oRzSuwMZ7WO+W/L76jbJQA5qxGeUBJOVOLVBuAUfeZ3g==
   dependencies:
     arg "^5.0.1"
     chalk "^4.1.2"
@@ -14219,10 +14219,10 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-turbo@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/turbo/-/turbo-1.0.4.tgz#6a6835b426658fb9840edc4b5de3f63e1fd19712"
-  integrity sha512-lPT/DNI7FiD+BBAjugyL5A24PA9g2DmLaErUCz6bGHfIlzPg1pawlX8GbZUCeCHA/DX/gCP8VP0BxGKb71c1Jw==
+turbo@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/turbo/-/turbo-1.0.6.tgz#9e38ffb98000812f7c7c89e68cdc8347554ca34f"
+  integrity sha512-sAbPHCm8usX3a27WHfWmAqt+wHxk/5Z6tqLqqI1MIzFoSEtmLZWyXOTxpi+60fwfwivOdW97cTsrZbkezVhGyw==
   dependencies:
     zlib "^1.0.5"
 
