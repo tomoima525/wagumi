@@ -1,10 +1,13 @@
-import { FooterLogo } from "@/cats/components/FooterLogo";
+import { FooterLogo } from "@/cats/components/templates/FooterLogo";
+import { PageHeader } from "@/cats/components/templates/PageHeader";
+
 import { DISCORD_URL, GITHUB_URL, TWITTER_URL } from "@/cats/const/config";
 
 export const IndexPage = (): JSX.Element => {
   return (
     <div className="w-full min-h-screen bg-black">
       <div className="flex flex-col justify-center items-center h-screen">
+        <PageHeader title="WAGUMI Cats" />
         <FooterLogo
           discord={DISCORD_URL}
           github={GITHUB_URL}
