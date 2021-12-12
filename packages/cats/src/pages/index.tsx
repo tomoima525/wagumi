@@ -1,3 +1,5 @@
+import { RandomCat } from "@/cats/components/organisms/RandomCat";
+
 import { FooterLogo } from "@/cats/components/templates/FooterLogo";
 import { PageHeader } from "@/cats/components/templates/PageHeader";
 
@@ -8,6 +10,7 @@ export const IndexPage = (): JSX.Element => {
     <div className="w-full min-h-screen bg-black">
       <div className="flex flex-col justify-center items-center h-screen">
         <PageHeader title="WAGUMI Cats" />
+        <RandomCat src="/0.png" alt="0.png" />
         <FooterLogo
           discord={DISCORD_URL}
           github={GITHUB_URL}
