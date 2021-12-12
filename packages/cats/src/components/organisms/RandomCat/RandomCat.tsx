@@ -8,13 +8,12 @@ interface RandomCatProps {
 }
 
 export const RandomCat: FC<RandomCatProps> = ({ src, alt }) => {
-  const width = 320;
-  const height = 320;
+  const imageSize = 320;
 
   // @todo randomize src for display
   return (
     <div className="my-4">
-      <SquareImage src={src} width={width} height={height} alt={alt} />
+      <SquareImage src={src} size={imageSize} alt={alt} />
     </div>
   );
 };
