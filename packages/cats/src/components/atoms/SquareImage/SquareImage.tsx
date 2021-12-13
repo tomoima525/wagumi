@@ -7,9 +7,5 @@ interface SquareImageProps extends ImageProps {
 }
 
 export const SquareImage: FC<SquareImageProps> = ({ alt, size, ...props }) => {
-  return (
-    <div className="py-4">
-      <Image width={size} height={size} alt={alt} {...props} />
-    </div>
-  );
+  return <Image width={size} height={size} alt={alt} {...props} />;
 };

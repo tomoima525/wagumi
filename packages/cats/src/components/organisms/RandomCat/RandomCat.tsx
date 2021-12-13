@@ -31,7 +31,7 @@ export const RandomCat: FC = () => {
   const imageSize = 320;
 
   return (
-    <div className="my-4">
+    <div className="py-3">
       <SquareImage
         src={debouncedImageURL}
         size={imageSize}
@@ -41,6 +41,9 @@ export const RandomCat: FC = () => {
           return setIsLoaded(true);
         }}
       />
+      <div className="flex justify-end py-3">
+        <h3 className="text-lg text-white">#{randomNumber}</h3>
+      </div>
       <div className="flex justify-end space-x-4">
         <button
           className="py-2 px-2 text-sm rounded-md border border-white"
