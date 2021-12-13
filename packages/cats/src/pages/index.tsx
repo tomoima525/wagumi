@@ -1,5 +1,4 @@
 import { RandomCat } from "@/cats/components/organisms/RandomCat";
-
 import { FooterLogo } from "@/cats/components/templates/FooterLogo";
 import { PageHeader } from "@/cats/components/templates/PageHeader";
 
