@@ -3,6 +3,9 @@
  */
 module.exports = {
   presets: [require("../../next.config")],
+  images: {
+    domains: ["cats.wagumi.xyz"],
+  },
   async rewrites() {
     return {
       beforeFiles: [

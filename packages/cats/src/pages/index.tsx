@@ -9,7 +9,7 @@ export const IndexPage = (): JSX.Element => {
     <div className="w-full min-h-screen bg-black">
       <div className="flex flex-col justify-center items-center h-screen">
         <PageHeader title="WAGUMI Cats" />
-        <RandomCat src="/0.png" alt="0.png" />
+        <RandomCat />
         <FooterLogo
           discord={DISCORD_URL}
           github={GITHUB_URL}
