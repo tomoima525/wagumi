@@ -2,6 +2,8 @@ import type { SignerWithAddress } from "@nomiclabs/hardhat-ethers/dist/src/signe
 import hre from "hardhat";
 import type { Artifact } from "hardhat/types";
 
+import { shouldBehaveLikeNFT } from "./NFT.behavior";
+
 import type { NFT } from "@/typechain/NFT";
 
 const { deployContract } = hre.waffle;
@@ -22,6 +24,11 @@ describe("NFT", () => {
     beforeEach(async function () {
       const nftArtifact: Artifact = await hre.artifacts.readArtifact("NFT");
       this.nft = <NFT>await deployContract(this.signers.admin, nftArtifact);
+
+      console.log(`NFT deploy tx hash: ${this.nft.deployTransaction.hash}`);
+      console.log(`NFT contract address: ${this.nft.address}`);
     });
+
+    shouldBehaveLikeNFT();
   });
 });
