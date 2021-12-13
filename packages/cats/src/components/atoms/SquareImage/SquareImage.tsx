@@ -1,17 +1,15 @@
+import type { ImageProps } from "next/image";
 import Image from "next/image";
-
 import type { FC } from "react";
 
-interface SquareImageProps {
-  src: string;
-  alt: string;
+interface SquareImageProps extends ImageProps {
   size: number;
 }
 
-export const SquareImage: FC<SquareImageProps> = ({ src, alt, size }) => {
+export const SquareImage: FC<SquareImageProps> = ({ alt, size, ...props }) => {
   return (
     <div className="py-4">
-      <Image src={src} width={size} height={size} alt={alt} />
+      <Image width={size} height={size} alt={alt} {...props} />
     </div>
   );
 };
