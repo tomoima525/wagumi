@@ -23,6 +23,8 @@
     "compile": "hardhat compile --force",
     "coverage": "hardhat coverage",
     "deploy": "yarn run deploy:hardhat",
+    "deploy:cmd": "hardhat deploy --write true",
+    "deploy:hardhat": "yarn run deploy:cmd",
     "deploy:local": "yarn run deploy:cmd --network localhost",
     "deploy:mainnet": "yarn run deploy:cmd --network mainnet",
     "deploy:rinkeby": "yarn run deploy:cmd --network rinkeby",

@@ -33,7 +33,7 @@ const config: HardhatUserConfig = {
   networks: {
     localhost: {
       live: false,
-      saveDeployments: true,
+      saveDeployments: false,
       tags: ["local"],
     },
     hardhat: {
@@ -42,7 +42,7 @@ const config: HardhatUserConfig = {
         url: `${process.env.ALCHEMY_MAINNET_URL}`,
       },
       live: false,
-      saveDeployments: true,
+      saveDeployments: false,
     },
     mainnet: {
       url: `https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
