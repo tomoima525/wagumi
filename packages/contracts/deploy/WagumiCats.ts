@@ -8,10 +8,10 @@ const deploy = async ({ ethers, network }: HardhatRuntimeEnvironment) => {
     return;
   }
 
-  const greeterFactory = (await ethers.getContractFactory(
-    "Greeter",
+  const wagumiCatsFactory = (await ethers.getContractFactory(
+    "WagumiCats",
   )) as WagumiCats__factory;
-  const greeter: WagumiCats = await greeterFactory.deploy(
+  const greeter: WagumiCats = await wagumiCatsFactory.deploy(
     "https://cats.wagumi.xyz/metadata/",
   );
   await greeter.deployed();

@@ -12,7 +12,7 @@ export interface Signers {
   admin: SignerWithAddress;
 }
 
-describe("NFT", () => {
+describe("WagumiCats", () => {
   before(async function () {
     this.signers = {} as Signers;
 
@@ -22,7 +22,9 @@ describe("NFT", () => {
 
   describe("Deploy", () => {
     beforeEach(async function () {
-      const nftArtifact: Artifact = await hre.artifacts.readArtifact("NFT");
+      const nftArtifact: Artifact = await hre.artifacts.readArtifact(
+        "WagumiCats",
+      );
       this.nft = <WagumiCats>(
         await deployContract(this.signers.admin, nftArtifact)
       );
