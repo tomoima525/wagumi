@@ -16,14 +16,16 @@ contract WagumiCats is ERC721, ReentrancyGuard, Ownable {
 
   /** MINTING LIMITS **/
 
-  mapping(address => bool) private mintCountMap;
+  mapping(address => uint256) private mintCountMap;
 
-  function allowedMintCount(address minter) public view returns (bool) {
-    return mintCountMap[minter];
+  uint256 public constant MINT_LIMIT_PER_WALLET = 1;
+
+  function allowedMintCount(address minter) public view returns (uint256) {
+    return MINT_LIMIT_PER_WALLET - mintCountMap[minter];
   }
 
   function updateMintCount(address minter) private {
-    mintCountMap[minter] = false;
+    mintCountMap[minter] += 1;
   }
 
   /** MINTING **/
@@ -46,7 +48,7 @@ contract WagumiCats is ERC721, ReentrancyGuard, Ownable {
   function mint() public nonReentrant {
     require(saleIsActive, "Sale not active");
 
-    if (allowedMintCount(_msgSender()) ) {
+    if (allowedMintCount(_msgSender()) >= 1) {
       updateMintCount(_msgSender());
     } else {
       revert("Minting limit exceeded");
@@ -65,7 +67,7 @@ contract WagumiCats is ERC721, ReentrancyGuard, Ownable {
 
   /** ACTIVATION **/
 
-  bool public saleIsActive = true;
+  bool public saleIsActive = false;
 
   function setSaleIsActive(bool saleIsActive_) external onlyOwner {
     saleIsActive = saleIsActive_;

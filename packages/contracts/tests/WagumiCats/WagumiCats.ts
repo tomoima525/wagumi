@@ -2,9 +2,10 @@ import type { SignerWithAddress } from "@nomiclabs/hardhat-ethers/dist/src/signe
 import hre from "hardhat";
 import type { Artifact } from "hardhat/types";
 
+import { shouldBehaveLikeAfterBatchMint } from "./WagumiCats.batch";
 import { shouldBehaveLikeDeployed } from "./WagumiCats.behavior";
 import { shouldBehaveLikeNFT } from "./WagumiCats.nft";
-import { shouldBehaveLikeAfterBatchMint } from "./WagumiCats.owner";
+import { shouldBehaveLikeAfterSale } from "./WagumiCats.sale";
 import { shouldBehaveLikeAfterTransfer } from "./WagumiCats.transfer";
 
 import type { WagumiCats } from "@/typechain/WagumiCats";
@@ -51,6 +52,23 @@ describe("WagumiCats", () => {
 
     shouldBehaveLikeNFT();
     shouldBehaveLikeAfterBatchMint();
+  });
+
+  describe("Permit sale for NFTs", () => {
+    beforeEach(async function () {
+      const nftArtifact: Artifact = await hre.artifacts.readArtifact(
+        "WagumiCats",
+      );
+      this.nft = <WagumiCats>(
+        await deployContract(this.signers.admin, nftArtifact)
+      );
+      const nft = this.nft as WagumiCats;
+      await nft.ownerBatchMint();
+      await nft.setSaleIsActive(true);
+      await nft.mint();
+    });
+
+    shouldBehaveLikeAfterSale();
   });
 
   describe("Owner Transfer", () => {
