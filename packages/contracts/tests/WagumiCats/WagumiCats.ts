@@ -4,7 +4,7 @@ import type { Artifact } from "hardhat/types";
 
 import { shouldBehaveLikeNFT } from "./WagumiCats.behavior";
 
-import type { NFT } from "@/typechain/NFT";
+import type { WagumiCats } from "@/typechain/WagumiCats";
 
 const { deployContract } = hre.waffle;
 
@@ -23,7 +23,9 @@ describe("NFT", () => {
   describe("Deploy", () => {
     beforeEach(async function () {
       const nftArtifact: Artifact = await hre.artifacts.readArtifact("NFT");
-      this.nft = <NFT>await deployContract(this.signers.admin, nftArtifact);
+      this.nft = <WagumiCats>(
+        await deployContract(this.signers.admin, nftArtifact)
+      );
     });
 
     shouldBehaveLikeNFT();
