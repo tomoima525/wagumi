@@ -5,6 +5,7 @@ import type { Artifact } from "hardhat/types";
 import { shouldBehaveLikeDeployed } from "./WagumiCats.behavior";
 import { shouldBehaveLikeNFT } from "./WagumiCats.nft";
 import { shouldBehaveLikeAfterBatchMint } from "./WagumiCats.owner";
+import { shouldBehaveLikeAfterTransfer } from "./WagumiCats.transfer";
 
 import type { WagumiCats } from "@/typechain/WagumiCats";
 
@@ -50,5 +51,22 @@ describe("WagumiCats", () => {
 
     shouldBehaveLikeNFT();
     shouldBehaveLikeAfterBatchMint();
+  });
+
+  describe("Owner Transfer", () => {
+    beforeEach(async function () {
+      const nftArtifact: Artifact = await hre.artifacts.readArtifact(
+        "WagumiCats",
+      );
+      this.nft = <WagumiCats>(
+        await deployContract(this.signers.admin, nftArtifact)
+      );
+      const nft = this.nft as WagumiCats;
+      await nft.ownerBatchMint();
+      await nft.transferOwnership("0xDCE4694e268bD83EA41B335320Ed11A684a1d7dB");
+    });
+
+    shouldBehaveLikeNFT();
+    shouldBehaveLikeAfterTransfer();
   });
 });
