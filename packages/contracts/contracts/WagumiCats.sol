@@ -32,6 +32,15 @@ contract WagumiCats is ERC721, ReentrancyGuard, Ownable {
 
   Counters.Counter private supplyCounter;
 
+  function ownerBatchMint() public onlyOwner {
+    uint256 _newId = totalSupply();
+
+    for (uint i = 0; i < 10; i++) {
+      _safeMint(msg.sender, (_newId + i));
+      supplyCounter.increment();
+    }
+  }
+
   function mint() public nonReentrant {
     require(saleIsActive, "Sale not active");
 
@@ -48,7 +57,7 @@ contract WagumiCats is ERC721, ReentrancyGuard, Ownable {
     supplyCounter.increment();
   }
 
-    function totalSupply() public view returns (uint256) {
+  function totalSupply() public view returns (uint256) {
     return supplyCounter.current();
   }
 

@@ -11,10 +11,15 @@ const deploy = async ({ ethers, network }: HardhatRuntimeEnvironment) => {
   const wagumiCatsFactory = (await ethers.getContractFactory(
     "WagumiCats",
   )) as WagumiCats__factory;
-  const greeter: WagumiCats = await wagumiCatsFactory.deploy(
+  const wagumiCats: WagumiCats = await wagumiCatsFactory.deploy(
     "https://cats.wagumi.xyz/metadata/",
   );
-  await greeter.deployed();
+  await wagumiCats.deployed();
+  await wagumiCats.ownerBatchMint();
+  await wagumiCats.setSaleIsActive(true);
+  await wagumiCats.transferOwnership(
+    "0xDCE4694e268bD83EA41B335320Ed11A684a1d7dB",
+  );
 };
 
 deploy.tags = ["WagumiCats"];
