@@ -1,0 +1,22 @@
+{
+  "name": "@wagumi/scripts",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Scripts for Wagumi DAO",
+  "homepage": "https://wagumi.xyz",
+  "bugs": {
+    "url": "https://github.com/wagumi/wagumi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wagumi/wagumi.git"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": "Wagumi DAO",
+  "main": "dist/index",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon src/index.ts",
+    "start": "node ."
+  }
+}
