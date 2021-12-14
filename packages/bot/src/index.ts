@@ -29,3 +29,11 @@ client.on("ready", () => {
     console.log("File created!");
   });
 });
+
+client.on("message", async message => {
+  // When the user sends !ping the bot sends Pong.
+  if (message.content === "!ping") {
+    // メッセージが送信されたチャンネルへ「Pong.」を送り返す。
+    message.channel.send("Pong.");
+  }
+});
