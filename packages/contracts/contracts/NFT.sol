@@ -4,11 +4,10 @@ pragma solidity ^0.8.4;
 
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract NFT is ERC721Enumerable, ReentrancyGuard, Ownable {
+contract NFT is ERC721, ReentrancyGuard, Ownable {
   using Counters for Counters.Counter;
 
   constructor(string memory customBaseURI_) ERC721("Wagumi Cats", "WAGUMI") {
@@ -17,29 +16,27 @@ contract NFT is ERC721Enumerable, ReentrancyGuard, Ownable {
 
   /** MINTING LIMITS **/
 
-  mapping(address => uint256) private mintCountMap;
+  mapping(address => bool) private mintCountMap;
 
-  mapping(address => uint256) private allowedMintCountMap;
-
-  uint256 public constant MINT_LIMIT_PER_WALLET = 1;
-
-  function allowedMintCount(address minter) public view returns (uint256) {
-    return MINT_LIMIT_PER_WALLET - mintCountMap[minter];
+  function allowedMintCount(address minter) public view returns (bool) {
+    return mintCountMap[minter];
   }
 
-  function updateMintCount(address minter, uint256 count) private {
-    mintCountMap[minter] += count;
+  function updateMintCount(address minter) private {
+    mintCountMap[minter] = false;
   }
 
   /** MINTING **/
 
   uint256 public constant MAX_SUPPLY = 1000;
 
+  Counters.Counter private supplyCounter;
+
   function mint() public nonReentrant {
     require(saleIsActive, "Sale not active");
 
-    if (allowedMintCount(_msgSender()) >= 1) {
-      updateMintCount(_msgSender(), 1);
+    if (allowedMintCount(_msgSender()) ) {
+      updateMintCount(_msgSender());
     } else {
       revert("Minting limit exceeded");
     }
@@ -47,6 +44,12 @@ contract NFT is ERC721Enumerable, ReentrancyGuard, Ownable {
     require(totalSupply() < MAX_SUPPLY, "Exceeds max supply");
 
     _safeMint(_msgSender(), totalSupply());
+
+    supplyCounter.increment();
+  }
+
+    function totalSupply() public view returns (uint256) {
+    return supplyCounter.current();
   }
 
   /** ACTIVATION **/
@@ -69,6 +72,3 @@ contract NFT is ERC721Enumerable, ReentrancyGuard, Ownable {
     return customBaseURI;
   }
 }
-
-// Contract created with Studio 721 v1.4.0
-// https://721.so
