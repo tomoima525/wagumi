@@ -2,7 +2,8 @@ import type { SignerWithAddress } from "@nomiclabs/hardhat-ethers/dist/src/signe
 import hre from "hardhat";
 import type { Artifact } from "hardhat/types";
 
-import { shouldBehaveLikeNFT } from "./WagumiCats.behavior";
+import { shouldBehaveLikeDeployed } from "./WagumiCats.behavior";
+import { shouldBehaveLikeNFT } from "./WagumiCats.nft";
 import { shouldBehaveLikeAfterBatchMint } from "./WagumiCats.owner";
 
 import type { WagumiCats } from "@/typechain/WagumiCats";
@@ -32,6 +33,7 @@ describe("WagumiCats", () => {
     });
 
     shouldBehaveLikeNFT();
+    shouldBehaveLikeDeployed();
   });
 
   describe("Owner Batch Mint", () => {
@@ -46,6 +48,7 @@ describe("WagumiCats", () => {
       await nft.ownerBatchMint();
     });
 
+    shouldBehaveLikeNFT();
     shouldBehaveLikeAfterBatchMint();
   });
 });
