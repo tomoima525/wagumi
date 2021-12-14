@@ -6,7 +6,7 @@ interface PageTitleProps {
 
 export const PageTitle: FC<PageTitleProps> = ({ title }) => {
   return (
-    <div className="my-4">
+    <div className="py-3">
       <p className="text-4xl font-bold tracking-widest">{title}</p>
     </div>
   );
