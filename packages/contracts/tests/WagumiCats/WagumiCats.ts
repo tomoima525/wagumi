@@ -2,9 +2,9 @@ import type { SignerWithAddress } from "@nomiclabs/hardhat-ethers/dist/src/signe
 import hre from "hardhat";
 import type { Artifact } from "hardhat/types";
 
-import { shouldBehaveLikeGreeter } from "./Greeter.behavior";
+import { shouldBehaveLikeNFT } from "./WagumiCats.behavior";
 
-import type { Greeter } from "@/typechain/Greeter";
+import type { NFT } from "@/typechain/NFT";
 
 const { deployContract } = hre.waffle;
 
@@ -12,7 +12,7 @@ export interface Signers {
   admin: SignerWithAddress;
 }
 
-describe("Unit tests", () => {
+describe("NFT", () => {
   before(async function () {
     this.signers = {} as Signers;
 
@@ -20,17 +20,12 @@ describe("Unit tests", () => {
     this.signers.admin = signers[0];
   });
 
-  describe("Greeter", () => {
+  describe("Deploy", () => {
     beforeEach(async function () {
-      const greeting: string = "Hello, world!";
-      const greeterArtifact: Artifact = await hre.artifacts.readArtifact(
-        "Greeter",
-      );
-      this.greeter = <Greeter>(
-        await deployContract(this.signers.admin, greeterArtifact, [greeting])
-      );
+      const nftArtifact: Artifact = await hre.artifacts.readArtifact("NFT");
+      this.nft = <NFT>await deployContract(this.signers.admin, nftArtifact);
     });
 
-    shouldBehaveLikeGreeter();
+    shouldBehaveLikeNFT();
   });
 });
