@@ -28,6 +28,8 @@ contract WagumiCats is ERC721, ReentrancyGuard, Ownable {
 
   /** MINTING **/
 
+  address public constant MULTI_SIG = 0xDCE4694e268bD83EA41B335320Ed11A684a1d7dB;
+
   uint256 public constant MAX_SUPPLY = 1000;
 
   Counters.Counter private supplyCounter;
@@ -36,7 +38,7 @@ contract WagumiCats is ERC721, ReentrancyGuard, Ownable {
     uint256 _currentId = totalSupply();
 
     for (uint i = 0; i < 10; i++) {
-      _safeMint(msg.sender, (_currentId + i));
+      _safeMint(MULTI_SIG, (_currentId + i));
       supplyCounter.increment();
     }
   }

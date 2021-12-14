@@ -3,6 +3,7 @@ import hre from "hardhat";
 import type { Artifact } from "hardhat/types";
 
 import { shouldBehaveLikeNFT } from "./WagumiCats.behavior";
+import { shouldBehaveLikeAfterBatchMint } from "./WagumiCats.owner";
 
 import type { WagumiCats } from "@/typechain/WagumiCats";
 
@@ -31,5 +32,20 @@ describe("WagumiCats", () => {
     });
 
     shouldBehaveLikeNFT();
+  });
+
+  describe("Owner Batch Mint", () => {
+    beforeEach(async function () {
+      const nftArtifact: Artifact = await hre.artifacts.readArtifact(
+        "WagumiCats",
+      );
+      this.nft = <WagumiCats>(
+        await deployContract(this.signers.admin, nftArtifact)
+      );
+      const nft = this.nft as WagumiCats;
+      await nft.ownerBatchMint();
+    });
+
+    shouldBehaveLikeAfterBatchMint();
   });
 });
