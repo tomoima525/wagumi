@@ -8,9 +8,9 @@ export const Seo: FC = () => {
       <Default
         noindex={false}
         nofollow={false}
-        title="Wagumi DAO"
-        canonical="https://wagumi.xyz"
-        description="Wagumi DAO - A Japanese Web3 Community"
+        title="Wagumi Cats"
+        canonical="https://cats.wagumi.xyz"
+        description="Wagumi Cats - NFT Collection for Wagumi DAO"
         openGraph={{
           locale: "en_US",
           site_name: "wagumi.xyz",
