@@ -37,11 +37,11 @@ contract WagumiCats is ERC721, ReentrancyGuard, Ownable {
 
   Counters.Counter private supplyCounter;
 
-  function ownerBatchMint() public onlyOwner {
+  function ownerBatchMint(address minter) public onlyOwner {
     uint256 _currentId = totalSupply();
 
     for (uint256 i = 0; i < 10; i++) {
-      _safeMint(MULTI_SIG, (_currentId + i));
+      _safeMint(minter, (_currentId + i));
       supplyCounter.increment();
     }
   }

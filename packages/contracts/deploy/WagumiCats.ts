@@ -17,11 +17,13 @@ const deploy = async ({
     log: true,
   });
 
-  await execute("WagumiCats", { from: deployer }, "ownerBatchMint");
+  // await execute("WagumiCats", { from: deployer }, "ownerBatchMint", [
+  //   "0xDCE4694e268bD83EA41B335320Ed11A684a1d7dB",
+  // ]);
   await execute("WagumiCats", { from: deployer }, "setSaleIsActive", [true]);
-  await execute("WagumiCats", { from: deployer }, "transferOwnership", [
-    "0xdce4694e268bd83ea41b335320ed11a684a1d7db",
-  ]);
+  // await execute("WagumiCats", { from: deployer }, "transferOwnership", [
+  //   "0xdce4694e268bd83ea41b335320ed11a684a1d7db",
+  // ]);
 };
 
 deploy.tags = ["WagumiCats"];

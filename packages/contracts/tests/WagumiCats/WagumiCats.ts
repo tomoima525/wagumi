@@ -47,7 +47,7 @@ describe("WagumiCats", () => {
         await deployContract(this.signers.admin, nftArtifact)
       );
       const nft = this.nft as WagumiCats;
-      await nft.ownerBatchMint();
+      await nft.ownerBatchMint("0xDCE4694e268bD83EA41B335320Ed11A684a1d7dB");
     });
 
     shouldBehaveLikeNFT();
@@ -63,7 +63,7 @@ describe("WagumiCats", () => {
         await deployContract(this.signers.admin, nftArtifact)
       );
       const nft = this.nft as WagumiCats;
-      await nft.ownerBatchMint();
+      await nft.ownerBatchMint("0xDCE4694e268bD83EA41B335320Ed11A684a1d7dB");
       await nft.setSaleIsActive(true);
       await nft.mint();
     });
@@ -80,7 +80,7 @@ describe("WagumiCats", () => {
         await deployContract(this.signers.admin, nftArtifact)
       );
       const nft = this.nft as WagumiCats;
-      await nft.ownerBatchMint();
+      await nft.ownerBatchMint("0xDCE4694e268bD83EA41B335320Ed11A684a1d7dB");
       await nft.transferOwnership("0xDCE4694e268bD83EA41B335320Ed11A684a1d7dB");
     });
 
