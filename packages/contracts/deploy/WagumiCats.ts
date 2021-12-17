@@ -1,29 +1,41 @@
+import type { DeployFunction } from "hardhat-deploy/types";
 import type { HardhatRuntimeEnvironment } from "hardhat/types";
 
-const deploy = async ({
+const deploy: DeployFunction = async ({
   getNamedAccounts,
   deployments,
+  ethers,
   network,
 }: HardhatRuntimeEnvironment) => {
   if (network.name !== "hardhat") {
     return;
   }
 
-  const { deploy, execute } = deployments;
+  const WAGUMI_MULTISIG_ADDRESS = "0xDCE4694e268bD83EA41B335320Ed11A684a1d7dB";
+
+  const { deploy } = deployments;
   const { deployer } = await getNamedAccounts();
-  await deploy("WagumiCats", {
+  const WagumiCatsContract = await deploy("WagumiCats", {
     args: ["https://cats.wagumi.xyz/metadata/"],
     from: deployer,
     log: true,
   });
 
-  // await execute("WagumiCats", { from: deployer }, "ownerBatchMint", [
-  //   "0xDCE4694e268bD83EA41B335320Ed11A684a1d7dB",
-  // ]);
-  await execute("WagumiCats", { from: deployer }, "setSaleIsActive", [true]);
-  // await execute("WagumiCats", { from: deployer }, "transferOwnership", [
-  //   "0xdce4694e268bd83ea41b335320ed11a684a1d7db",
-  // ]);
+  const WagumiCatsFactory = await ethers.getContractFactory("WagumiCats");
+  const WagumiCats = WagumiCatsFactory.attach(WagumiCatsContract.address);
+
+  const txOwnerBatchMint = await WagumiCats.ownerBatchMint(
+    WAGUMI_MULTISIG_ADDRESS,
+  );
+  await txOwnerBatchMint.wait();
+
+  const txSetSaleIsActive = await WagumiCats.setSaleIsActive(true);
+  await txSetSaleIsActive.wait();
+
+  const txTransferOwnership = await WagumiCats.transferOwnership(
+    WAGUMI_MULTISIG_ADDRESS,
+  );
+  await txTransferOwnership.wait();
 };
 
 deploy.tags = ["WagumiCats"];
