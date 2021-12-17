@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export const GoMint = () => {
   return (
-    <div className="flex w-full max-w-xs">
+    <div className="py-3 max-w-xs">
       <Link href="/mint">
-        <a className="p-1 mt-2 w-full text-2xl text-center text-white hover:bg-gray-300 hover:bg-opacity-30 rounded-md border border-current">
+        <a className="py-3 px-6 mt-2 w-full text-2xl text-center text-white hover:bg-gray-400 hover:bg-opacity-20 rounded-md border border-current">
           Mint
         </a>
       </Link>

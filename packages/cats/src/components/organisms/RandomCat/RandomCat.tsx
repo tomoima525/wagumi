@@ -46,7 +46,7 @@ export const RandomCat: FC = () => {
       </div>
       <div className="flex justify-center space-x-4 max-w-xs">
         <button
-          className="py-2 px-2 hover:bg-gray-300 hover:bg-opacity-30 rounded-md border border-white"
+          className="py-2 px-2 hover:bg-gray-400 hover:bg-opacity-20 rounded-md border border-white"
           onClick={(): void => {
             return copy(debouncedImageURL);
           }}
@@ -55,7 +55,7 @@ export const RandomCat: FC = () => {
         </button>
         <button
           // eslint-disable-next-line tailwindcss/no-custom-classname
-          className="grow py-2 px-2 text-white hover:bg-gray-300 hover:bg-opacity-30 rounded-md border border-white"
+          className="grow py-2 px-2 text-white hover:bg-gray-400 hover:bg-opacity-20 rounded-md border border-white"
           onClick={setRandom}
         >
           Generate Random Wagumi Cat

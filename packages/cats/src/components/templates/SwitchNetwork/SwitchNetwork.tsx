@@ -11,7 +11,7 @@ export const SwitchNetwork = () => {
         The example only supports the Rinkeby network.
       </h3>
       <button
-        className="p-4 mt-8 text-3xl hover:bg-gray-300 hover:bg-opacity-40 border-4 border-current"
+        className="p-4 mt-8 text-3xl hover:bg-gray-200 hover:bg-opacity-40 border-4 border-current"
         disabled={loading}
         onClick={switchNetwork}
       >
