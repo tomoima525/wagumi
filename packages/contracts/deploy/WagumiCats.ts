@@ -22,15 +22,18 @@ const deploy: DeployFunction = async ({
   const txOwnerBatchMint = await WagumiCats.ownerBatchMint(
     WAGUMI_MULTISIG_ADDRESS,
   );
-  await txOwnerBatchMint.wait();
+  const receiptOwnerBatchMint = await txOwnerBatchMint.wait();
+  console.log(JSON.stringify(receiptOwnerBatchMint));
 
   const txSetSaleIsActive = await WagumiCats.setSaleIsActive(true);
-  await txSetSaleIsActive.wait();
+  const receiptSetSaleIsActive = await txSetSaleIsActive.wait();
+  console.log(JSON.stringify(receiptSetSaleIsActive));
 
   const txTransferOwnership = await WagumiCats.transferOwnership(
     WAGUMI_MULTISIG_ADDRESS,
   );
-  await txTransferOwnership.wait();
+  const receiptTransferOwnership = await txTransferOwnership.wait();
+  console.log(JSON.stringify(receiptTransferOwnership));
 };
 
 deploy.tags = ["WagumiCats"];
