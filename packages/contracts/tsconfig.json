@@ -18,6 +18,7 @@
     "./deploy",
     "./scripts",
     "./tasks",
+    "./tests",
     "./typechain",
     "./hardhat.config.ts"
   ]

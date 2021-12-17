@@ -1,3 +1,2 @@
-export const DISCORD_URL = "https://discord.com/invite/4cwCuRhD";
-export const GITHUB_URL = "https://github.com/wagumi/wagumi";
-export const TWITTER_URL = "https://twitter.com/wagumiDAO";
+export const SUPPORTED_NETWORK_NUMBER: number = 4;
+export const SUPPORTED_NETWORK_NAME = "rinkeby";
