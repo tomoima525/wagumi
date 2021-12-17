@@ -1,7 +1,7 @@
 export const Loading = () => {
   return (
     <>
-      <h1 className="text-6xl text-center">Loading...</h1>
+      <h1 className="text-5xl text-center">Loading...</h1>
     </>
   );
 };

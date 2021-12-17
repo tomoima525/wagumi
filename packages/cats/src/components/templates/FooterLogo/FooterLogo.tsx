@@ -36,19 +36,19 @@ export const FooterLogo: FC<FooterLogoProps> = ({
         {discord && (
           <FooterIconLink href={discord}>
             <span className="sr-only">Discord</span>
-            <FaDiscord className="w-8 h-8" />
+            <FaDiscord className="w-6 h-6" />
           </FooterIconLink>
         )}
         {github && (
           <FooterIconLink href={github}>
             <span className="sr-only">Github</span>
-            <FaGithub className="w-8 h-8" />
+            <FaGithub className="w-6 h-6" />
           </FooterIconLink>
         )}
         {twitter && (
           <FooterIconLink href={twitter}>
             <span className="sr-only">Twitter</span>
-            <FaTwitter className="w-8 h-8" />
+            <FaTwitter className="w-6 h-6" />
           </FooterIconLink>
         )}
       </div>

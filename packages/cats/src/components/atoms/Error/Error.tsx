@@ -3,8 +3,8 @@ import type { FallbackProps } from "react-error-boundary";
 export const Error = ({ error, resetErrorBoundary }: FallbackProps) => {
   return (
     <>
-      <h3 className="text-3xl text-center text-red-800 ">Error</h3>
-      <p className="text-lg text-center text-red-600 line-clamp-3">
+      <h3 className="text-6xl text-center text-red-600">Error</h3>
+      <p className="overflow-hidden max-w-full text-lg text-center text-red-700 line-clamp-5">
         {error.message}
       </p>
       <button

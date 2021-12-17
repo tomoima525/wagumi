@@ -1,5 +1,6 @@
 import { ERC721_ABI, useContract } from "ethereal-react";
 
+import { Summary } from "@/cats/components/molecules/Summary";
 import { Minter } from "@/cats/components/organisms/Minter";
 import { FooterLogo } from "@/cats/components/templates/FooterLogo";
 import { PageHeader } from "@/cats/components/templates/PageHeader";
@@ -15,6 +16,7 @@ export const MintPage = (): JSX.Element => {
   return (
     <>
       <PageHeader title="WAGUMI Cats 🐾" />
+      <Summary contract={WagumiCatsDeploymentContract} />
       <Minter contract={WagumiCatsDeploymentContract} />
       <FooterLogo
         discord={DISCORD_URL}

@@ -42,11 +42,11 @@ export const RandomCat: FC = () => {
         }}
       />
       <div className="flex justify-end py-3">
-        <h3 className="text-lg text-white">#{randomNumber}</h3>
+        <h3 className="text-3xl text-white">#{randomNumber}</h3>
       </div>
       <div className="flex justify-end space-x-4">
         <button
-          className="py-2 px-2 text-sm rounded-md border border-white"
+          className="py-2 px-2 rounded-md border border-white"
           onClick={(): void => {
             return copy(debouncedImageURL);
           }}
@@ -54,10 +54,10 @@ export const RandomCat: FC = () => {
           {isCopied ? "Copied!" : "Copy Image URL"}
         </button>
         <button
-          className="py-2 px-2 text-sm text-white rounded-md border border-white"
+          className="py-2 px-2 text-white rounded-md border border-white"
           onClick={setRandom}
         >
-          Generate Random Mosh
+          Generate Random Wagumi Cat
         </button>
       </div>
     </div>
