@@ -19,21 +19,27 @@ const deploy: DeployFunction = async ({
   const WagumiCatsFactory = await ethers.getContractFactory("WagumiCats");
   const WagumiCats = WagumiCatsFactory.attach(WagumiCatsContract.address);
 
+  console.log("ownerBatchMint");
+
   const txOwnerBatchMint = await WagumiCats.ownerBatchMint(
     WAGUMI_MULTISIG_ADDRESS,
   );
   const receiptOwnerBatchMint = await txOwnerBatchMint.wait();
-  console.log(JSON.stringify(receiptOwnerBatchMint));
+  console.log(JSON.stringify(receiptOwnerBatchMint, null, 4));
+
+  console.log("setSaleIsActive");
 
   const txSetSaleIsActive = await WagumiCats.setSaleIsActive(true);
   const receiptSetSaleIsActive = await txSetSaleIsActive.wait();
-  console.log(JSON.stringify(receiptSetSaleIsActive));
+  console.log(JSON.stringify(receiptSetSaleIsActive, null, 4));
+
+  console.log("transferOwnership");
 
   const txTransferOwnership = await WagumiCats.transferOwnership(
     WAGUMI_MULTISIG_ADDRESS,
   );
   const receiptTransferOwnership = await txTransferOwnership.wait();
-  console.log(JSON.stringify(receiptTransferOwnership));
+  console.log(JSON.stringify(receiptTransferOwnership, null, 4));
 };
 
 deploy.tags = ["WagumiCats"];
