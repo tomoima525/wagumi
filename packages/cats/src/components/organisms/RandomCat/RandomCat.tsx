@@ -1,6 +1,6 @@
 import clsx from "clsx";
+import Link from "next/link";
 import type { FC } from "react";
-
 import { useEffect, useState, useCallback } from "react";
 
 import { SquareImage } from "@/cats/components/atoms/SquareImage";
@@ -60,6 +60,13 @@ export const RandomCat: FC = () => {
         >
           Generate Random Wagumi Cat
         </button>
+      </div>
+      <div className="flex w-full max-w-xs">
+        <Link href="/mint">
+          <a className="p-1 mt-2 w-full text-2xl text-center text-white hover:bg-gray-300 hover:bg-opacity-30 rounded-md border border-current">
+            Go Mint
+          </a>
+        </Link>
       </div>
     </div>
   );
