@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { FC } from "react";
 
 interface PageTitleProps {
@@ -7,7 +8,11 @@ interface PageTitleProps {
 export const PageTitle: FC<PageTitleProps> = ({ title }) => {
   return (
     <div className="py-3">
-      <p className="text-5xl font-bold tracking-widest">{title}</p>
+      <Link href="/">
+        <a className="text-5xl font-bold tracking-widest hover:underline">
+          {title}
+        </a>
+      </Link>
     </div>
   );
 };
