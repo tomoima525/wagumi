@@ -8,7 +8,7 @@ export const Error = ({ error, resetErrorBoundary }: FallbackProps) => {
         {error.message}
       </p>
       <button
-        className="p-3 mt-8 text-3xl text-white border-2"
+        className="p-3 mt-8 text-3xl text-white hover:bg-slate-300 hover:bg-opacity-30 border-2"
         onClick={resetErrorBoundary}
       >
         Try again
