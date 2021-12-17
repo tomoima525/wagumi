@@ -4,9 +4,9 @@ import type { AppProps } from "next/app";
 
 import { Suspense } from "react";
 
-import "tailwindcss/tailwind.css";
 import { ErrorBoundary } from "react-error-boundary";
 
+import "@/cats/styles/index.css";
 import { Error } from "@/cats/components/atoms/Error";
 import { Loading } from "@/cats/components/atoms/Loading";
 import { Container } from "@/cats/components/molecules/Container";
