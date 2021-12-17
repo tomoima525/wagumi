@@ -1,11 +1,9 @@
-import type { ImageProps } from "next/image";
-import Image from "next/image";
-import type { FC } from "react";
+import type { FC, ImgHTMLAttributes } from "react";
 
-interface SquareImageProps extends ImageProps {
+interface SquareImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   size: number;
 }
 
 export const SquareImage: FC<SquareImageProps> = ({ alt, size, ...props }) => {
-  return <Image width={size} height={size} alt={alt} {...props} />;
+  return <img width={size} height={size} alt={alt} {...props} />;
 };
