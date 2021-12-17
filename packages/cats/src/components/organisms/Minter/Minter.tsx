@@ -31,7 +31,7 @@ export const View = ({
       <h3 className="text-6xl text-center">{name}</h3>
       <img className="mt-3 w-[300px] h-[300px]" src={image} alt={name} />
       <a
-        href={`https://opensea.io/assets/matic/${contract.address}/${tokenId}`}
+        href={`https://testnets.opensea.io/assets/${contract.address}/${tokenId}`}
         className="mt-6 text-2xl underline hover:bg-gray-600 hover:cursor-pointer"
         target="_blank"
         rel="noreferrer"
