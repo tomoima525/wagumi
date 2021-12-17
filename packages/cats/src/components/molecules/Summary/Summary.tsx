@@ -20,7 +20,7 @@ export const Summary = ({ contract }: { contract: Contract }) => {
         {/* eslint-disable-next-line @typescript-eslint/no-unsafe-call */}
         {tokenId.toString()} / 1000
       </h1>
-      <div className="my-5 mx-3 w-full max-w-sm sm:max-w-xl md:max-w-3xl h-9 bg-gray-200">
+      <div className="my-5 mx-3 w-full max-w-sm sm:max-w-xl md:max-w-3xl h-9 bg-gray-300">
         <div
           className="h-full text-xs leading-none text-white bg-green-400"
           // eslint-disable-next-line @typescript-eslint/no-unsafe-call
