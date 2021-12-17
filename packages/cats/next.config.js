@@ -3,8 +3,8 @@
  */
 module.exports = {
   presets: [require("../../next.config")],
-  images: {
-    domains: ["cats.wagumi.xyz"],
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   async rewrites() {
     return {
