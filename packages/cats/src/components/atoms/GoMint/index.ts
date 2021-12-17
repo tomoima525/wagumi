@@ -1,0 +1,1 @@
+export { GoMint } from "./GoMint";

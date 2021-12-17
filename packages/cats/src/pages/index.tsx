@@ -1,3 +1,4 @@
+import { GoMint } from "@/cats/components/atoms/GoMint";
 import { RandomCat } from "@/cats/components/organisms/RandomCat";
 import { FooterLogo } from "@/cats/components/templates/FooterLogo";
 import { PageHeader } from "@/cats/components/templates/PageHeader";
@@ -9,6 +10,7 @@ export const IndexPage = (): JSX.Element => {
     <>
       <PageHeader title="WAGUMI Cats 🐾" />
       <RandomCat />
+      <GoMint />
       <FooterLogo
         discord={DISCORD_URL}
         github={GITHUB_URL}
