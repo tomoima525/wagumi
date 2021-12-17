@@ -67,7 +67,7 @@ const checkChnanelAllowedList = (
   allowedList: string[],
 ): boolean => {
   // The check is deactivated if the white list was unavailable.
-  if (!allowedList) {
+  if (!allowedList.length) {
     console.info(
       "channel check is disabled due to the allowed list was unavailable",
     );
