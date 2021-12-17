@@ -21,13 +21,13 @@ client.on("message", async message => {
   if (message.content.startsWith(cmdPrefix)) {
     if (!isProd && !isDevChannel(message.channel.id)) {
       console.warn(
-        "only a whitelisted dev channel is available for development",
+        "only an allowed listed dev channel is available for development",
       );
       console.log(getDebugInfo());
       return;
     } else if (isProd && isProdChannel(message.channel.id)) {
       console.warn(
-        "only a whitelisted prod channel is available for production",
+        "only an allowed listed prod channel is available for production",
       );
       console.log(getDebugInfo());
       return;

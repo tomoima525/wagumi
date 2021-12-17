@@ -4,8 +4,8 @@
 import {
   ENVIRONMENT,
   DEPLOY_BRANCH,
-  DEV_CHANNEL_WHITELIST,
-  PROD_CHANNEL_WHITELIST,
+  DEV_CHANNEL_ALLOWED_LIST,
+  PROD_CHANNEL_ALLOWED_LIST,
 } from "./config";
 
 export const isProd = ENVIRONMENT === "production";
@@ -19,8 +19,8 @@ export const getDebugInfo = function () {
     isProd: isProd,
     branch: DEPLOY_BRANCH,
     env: ENVIRONMENT,
-    devChannel: DEV_CHANNEL_WHITELIST,
-    prodChannel: PROD_CHANNEL_WHITELIST,
+    devChannel: DEV_CHANNEL_ALLOWED_LIST,
+    prodChannel: PROD_CHANNEL_ALLOWED_LIST,
   };
 };
 
@@ -48,7 +48,7 @@ export const printDebugInfo = function (message: string): string {
  * @returns {boolean}
  */
 export const isDevChannel = function (channelId: string): boolean {
-  return checkChnanelWhitelist(channelId, DEV_CHANNEL_WHITELIST);
+  return checkChnanelAllowedList(channelId, DEV_CHANNEL_ALLOWED_LIST);
 };
 
 /**
@@ -59,16 +59,19 @@ export const isDevChannel = function (channelId: string): boolean {
  * @returns {boolean}
  */
 export const isProdChannel = function (channelId: string): boolean {
-  return checkChnanelWhitelist(channelId, PROD_CHANNEL_WHITELIST);
+  return checkChnanelAllowedList(channelId, PROD_CHANNEL_ALLOWED_LIST);
 };
 
-const checkChnanelWhitelist = (id: string, whitelist: string[]): boolean => {
+const checkChnanelAllowedList = (
+  id: string,
+  allowedList: string[],
+): boolean => {
   // The check is deactivated if the white list was unavailable.
-  if (!whitelist) {
+  if (!allowedList) {
     console.info(
-      "channel check is disabled due to the whitelist was unavailable",
+      "channel check is disabled due to the allowed list was unavailable",
     );
     return true;
   }
-  return whitelist.includes(id);
+  return allowedList.includes(id);
 };
