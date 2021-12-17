@@ -44,9 +44,9 @@ export const RandomCat: FC = () => {
       <div className="flex justify-end py-3">
         <h3 className="text-3xl text-white">#{randomNumber}</h3>
       </div>
-      <div className="flex justify-center space-x-4 max-w-xs">
+      <div className="flex justify-center max-w-xs">
         <button
-          className="py-2 px-2 hover:bg-gray-300 hover:bg-opacity-30 rounded-md border border-white"
+          className="py-2 px-2 mr-3 hover:bg-gray-300 hover:bg-opacity-30 rounded-md border border-white"
           onClick={(): void => {
             return copy(debouncedImageURL);
           }}
@@ -61,7 +61,7 @@ export const RandomCat: FC = () => {
           Generate Random Wagumi Cat
         </button>
       </div>
-      <div className="flex w-full max-w-xs">
+      <div className="flex py-3 w-full max-w-xs">
         <Link href="/mint">
           <a className="p-1 mt-2 w-full text-2xl text-center text-white hover:bg-gray-300 hover:bg-opacity-30 rounded-md border border-current">
             Go Mint
