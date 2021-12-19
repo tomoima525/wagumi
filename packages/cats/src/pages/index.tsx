@@ -1,5 +1,4 @@
 import { Credits } from "@/cats/components/atoms/Credits";
-import { Opensea } from "@/cats/components/atoms/Opensea";
 import { RandomCat } from "@/cats/components/organisms/RandomCat";
 import { FooterLogo } from "@/cats/components/templates/FooterLogo";
 import { PageHeader } from "@/cats/components/templates/PageHeader";
@@ -11,7 +10,6 @@ export const IndexPage = (): JSX.Element => {
       <PageHeader title="WAGUMI Cats 🐾" />
       <RandomCat />
       <Credits />
-      <Opensea />
       <FooterLogo
         discord={DISCORD_URL}
         github={GITHUB_URL}
