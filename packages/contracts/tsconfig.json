@@ -8,6 +8,7 @@
     "rootDirs": [
       "./abi",
       "./deploy",
+      "./deployments",
       "./scripts",
       "./src",
       "./tasks",
@@ -25,6 +26,7 @@
   "include": [
     "./abi/**/*.json",
     "./deploy",
+    "./deployments/**/*.json",
     "./scripts",
     "./src",
     "./tasks",

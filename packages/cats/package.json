@@ -23,6 +23,7 @@
     "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/line-clamp": "^0.3.0",
     "@tailwindcss/typography": "^0.5.0",
+    "@wagumi/contracts": "*",
     "autoprefixer": "^10.4.0",
     "clsx": "^1.1.1",
     "copy-to-clipboard": "^3.3.1",
