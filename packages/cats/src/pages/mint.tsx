@@ -4,6 +4,7 @@ import {
 } from "@wagumi/contracts";
 import { ERC721_ABI, useContract } from "ethereal-react";
 
+import { Credits } from "@/cats/components/atoms/Credits";
 import { Summary } from "@/cats/components/molecules/Summary";
 import { Minter } from "@/cats/components/organisms/Minter";
 import { FooterLogo } from "@/cats/components/templates/FooterLogo";
@@ -21,6 +22,7 @@ export const MintPage = (): JSX.Element => {
       <PageHeader title="WAGUMI Cats 🐾" />
       <Summary contract={WagumiCatsDeploymentContract} />
       <Minter contract={WagumiCatsDeploymentContract} />
+      <Credits />
       <FooterLogo
         discord={DISCORD_URL}
         github={GITHUB_URL}

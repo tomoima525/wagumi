@@ -1,7 +1,7 @@
+import { Credits } from "@/cats/components/atoms/Credits";
 import { RandomCat } from "@/cats/components/organisms/RandomCat";
 import { FooterLogo } from "@/cats/components/templates/FooterLogo";
 import { PageHeader } from "@/cats/components/templates/PageHeader";
-
 import { DISCORD_URL, GITHUB_URL, TWITTER_URL } from "@/cats/const/social";
 
 export const IndexPage = (): JSX.Element => {
@@ -9,6 +9,7 @@ export const IndexPage = (): JSX.Element => {
     <>
       <PageHeader title="WAGUMI Cats 🐾" />
       <RandomCat />
+      <Credits />
       <FooterLogo
         discord={DISCORD_URL}
         github={GITHUB_URL}
