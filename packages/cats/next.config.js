@@ -1,7 +1,10 @@
+const withTM = require("next-transpile-modules")(["@wagumi/contracts"]);
+
 /**
  * @type {import('next').NextConfig}
  */
-module.exports = {
+
+module.exports = withTM({
   presets: [require("../../next.config")],
   eslint: {
     ignoreDuringBuilds: true,
@@ -17,4 +20,4 @@ module.exports = {
       ],
     };
   },
-};
+});

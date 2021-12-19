@@ -1,6 +1,9 @@
 import type { DeployFunction } from "hardhat-deploy/types";
 import type { HardhatRuntimeEnvironment } from "hardhat/types";
 
+import type { WagumiCats } from "@/typechain/WagumiCats";
+import type { WagumiCats__factory } from "@/typechain/factories/WagumiCats__factory";
+
 const deploy: DeployFunction = async ({
   getNamedAccounts,
   deployments,
@@ -16,8 +19,11 @@ const deploy: DeployFunction = async ({
     log: true,
   });
 
-  const WagumiCatsFactory = await ethers.getContractFactory("WagumiCats");
-  const WagumiCats = WagumiCatsFactory.attach(WagumiCatsContract.address);
+  const WagumiCatsFactory: WagumiCats__factory =
+    await ethers.getContractFactory("WagumiCats");
+  const WagumiCats: WagumiCats = WagumiCatsFactory.attach(
+    WagumiCatsContract.address,
+  );
 
   console.log("ownerBatchMint");
 
