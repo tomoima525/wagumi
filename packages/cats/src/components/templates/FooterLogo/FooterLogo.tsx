@@ -1,4 +1,4 @@
-import type { ReactNode, FC } from "react";
+import type { FC } from "react";
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 
 interface FooterLinkProps {
