@@ -1,7 +1,4 @@
-import {
-  WagumiCatsRinkebyDeployment,
-  WagumiCats__factory,
-} from "@wagumi/contracts";
+import { WagumiCatsRinkebyDeployment } from "@wagumi/contracts";
 import { ERC721_ABI, useContract } from "ethereal-react";
 
 import { Summary } from "@/cats/components/molecules/Summary";
@@ -13,7 +10,7 @@ import { DISCORD_URL, GITHUB_URL, TWITTER_URL } from "@/cats/const/social";
 export const MintPage = (): JSX.Element => {
   const WagumiCatsDeploymentContract = useContract(
     WagumiCatsRinkebyDeployment.address,
-    [...ERC721_ABI, WagumiCats__factory],
+    [...ERC721_ABI],
   );
 
   return (
