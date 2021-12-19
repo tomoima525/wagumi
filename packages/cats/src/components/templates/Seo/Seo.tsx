@@ -13,10 +13,10 @@ export const Seo: FC = () => {
         description="Wagumi Cats - NFT Collection for Wagumi DAO"
         openGraph={{
           locale: "en_US",
-          site_name: "wagumi.xyz",
+          site_name: "cats.wagumi.xyz",
           type: "website",
-          url: "https://wagumi.xyz",
-          images: [{ url: "https://wagumi.xyz/ogp.jpg" }],
+          url: "https://cats.wagumi.xyz",
+          images: [{ url: "https://cats.wagumi.xyz/ogp.jpg" }],
         }}
         twitter={{
           cardType: "summary_large_image",
