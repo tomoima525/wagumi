@@ -1,8 +1,7 @@
-import type { ReactNode, FC } from "react";
+import type { FC } from "react";
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 
-interface FooterIconLinkProps {
-  children: ReactNode;
+interface FooterLinkProps {
   href: string;
 }
 
@@ -12,7 +11,22 @@ interface FooterLogoProps {
   twitter?: string;
 }
 
-export const FooterIconLink: FC<FooterIconLinkProps> = ({ children, href }) => {
+export const FooterLink: FC<FooterLinkProps> = ({ children, href }) => {
+  return (
+    <p className="text-xl italic font-semibold text-gray-300">
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        className="hover:text-gray-100 hover:underline"
+      >
+        {children}
+      </a>
+    </p>
+  );
+};
+
+export const FooterIconLink: FC<FooterLinkProps> = ({ children, href }) => {
   return (
     <a
       href={href}
@@ -32,6 +46,15 @@ export const FooterLogo: FC<FooterLogoProps> = ({
 }) => {
   return (
     <footer className="py-4 px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
+      <div className="flex justify-center space-x-6">
+        <FooterLink href="https://etherscan.io/address/0x6144d927ee371de7e7f8221b596f3432e7a8e6d9">
+          Etherscan
+        </FooterLink>
+        <FooterLink href="https://opensea.io/collection/wagumi-cats">
+          Opensea
+        </FooterLink>
+      </div>
+      <div className="py-3" />
       <div className="flex justify-center space-x-6">
         {discord && (
           <FooterIconLink href={discord}>
