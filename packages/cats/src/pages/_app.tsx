@@ -37,7 +37,7 @@ const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
       >
         <ErrorBoundary FallbackComponent={Error}>
           <Suspense fallback={<Loading />}>
-            <RequireNetwork chainId={4} fallback={<SwitchNetwork />}>
+            <RequireNetwork chainId={1} fallback={<SwitchNetwork />}>
               <Component {...pageProps} />
             </RequireNetwork>
           </Suspense>
