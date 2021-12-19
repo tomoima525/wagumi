@@ -127,13 +127,13 @@ export const Minter = ({ contract }: { contract: Contract }) => {
   return (
     <div className="py-6">
       <button
-        className="p-4 text-3xl border-4 border-current"
+        className="p-4 text-3xl hover:bg-gray-300 hover:bg-opacity-30 border-4 border-current"
         disabled={loading}
         onClick={() => {
           return mint();
         }}
       >
-        Mint NFT #{Number(tokenId.toString()) + 1} to reveal
+        Mint NFT #{Number(tokenId.toString()) + 1}
       </button>
     </div>
   );

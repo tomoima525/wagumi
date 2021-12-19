@@ -47,6 +47,7 @@
     "extends": "npm-package-json-lint-config-default"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.19.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/exec": "^6.0.3",
