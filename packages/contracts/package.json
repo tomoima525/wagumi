@@ -15,9 +15,10 @@
   "author": "Wagumi DAO",
   "main": "dist/index",
   "scripts": {
-    "build": "yarn run clean && yarn build:sol && yarn build:ts",
+    "build": "yarn run clean && yarn build:sol && yarn build:ts && yarn build:declarations",
+    "build:declarations": "shx cp typechain/*.d.ts dist/typechain",
     "build:sol": "yarn run compile",
-    "build:ts": "tsc",
+    "build:ts": "tsc -p tsconfig.build.json",
     "clean": "yarn run clean:sol",
     "clean:sol": "hardhat clean",
     "compile": "hardhat compile --force",

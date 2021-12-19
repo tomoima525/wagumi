@@ -8,6 +8,7 @@
     "module": "commonjs",
     "outDir": "./dist",
     "paths": {
+      "@/abi/*": ["./packages/contracts/abi/*"],
       "@/airdrop/*": ["./packages/airdrop/src/*"],
       "@/airdrop/public/*": ["./packages/airdrop/public/*"],
       "@/artifacts/*": ["./packages/contracts/artifacts/*"],
@@ -18,6 +19,7 @@
       "@/home/public/*": ["./packages/home/public/*"],
       "@/typechain/*": ["./packages/contracts/typechain/*"]
     },
+    "resolveJsonModule": true,
     "sourceMap": true,
     "strict": true,
     "target": "ES2017"

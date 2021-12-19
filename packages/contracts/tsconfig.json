@@ -5,7 +5,15 @@
     "esModuleInterop": true,
     "module": "commonjs",
     "outDir": "./dist",
-    "rootDirs": ["./deploy", "./scripts", "./tasks", "./tests", "./typechain"],
+    "rootDirs": [
+      "./abi",
+      "./deploy",
+      "./scripts",
+      "./src",
+      "./tasks",
+      "./tests",
+      "./typechain"
+    ],
     "sourceMap": true,
     "strict": true,
     "target": "ES2017",
@@ -15,8 +23,10 @@
   "extends": "../../tsconfig.base.json",
   "files": ["./hardhat.config.ts"],
   "include": [
+    "./abi/**/*.json",
     "./deploy",
     "./scripts",
+    "./src",
     "./tasks",
     "./tests",
     "./typechain",
