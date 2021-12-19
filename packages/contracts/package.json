@@ -39,7 +39,7 @@
     "hardhat": "hardhat",
     "node": "hardhat node --hostname 0.0.0.0 --show-accounts",
     "task:accounts": "hardhat accounts",
-    "task:deploy:Greeter": "hardhat deploy:Greeter",
+    "task:balance": "hardhat balance",
     "test": "hardhat test",
     "test:coverate": "hardhat coverate",
     "test:gas": "REPORT_GAS=true hardhat test",
