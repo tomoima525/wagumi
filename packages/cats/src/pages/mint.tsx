@@ -11,7 +11,7 @@ import { DISCORD_URL, GITHUB_URL, TWITTER_URL } from "@/cats/const/social";
 export const MintPage = (): JSX.Element => {
   const WagumiCatsDeploymentContract = useContract(
     WagumiCatsDeployment.address,
-    [...ERC721_ABI],
+    [...ERC721_ABI, "function mint()"],
   );
 
   return (
