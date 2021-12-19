@@ -15,6 +15,8 @@ import "hardhat-gas-reporter";
 import "hardhat-spdx-license-identifier";
 import "hardhat-watcher";
 
+import "./tasks";
+
 dotenv.config();
 
 const accounts =
