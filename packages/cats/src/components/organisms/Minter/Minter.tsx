@@ -116,7 +116,7 @@ export const Minter = ({ contract }: { contract: Contract }) => {
         <div>
           <Minted
             contract={contract}
-            tokenId={Number(tokenId)}
+            tokenId={Number(tokenId) + 1}
             transaction={data}
           />
         </div>
