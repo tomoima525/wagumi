@@ -24,11 +24,7 @@ const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
           walletconnect: {
             package: WalletConnectProvider,
             options: {
-              rpc: {
-                1: `https://mainnet.infura.io/v3/${process.env.NEXT_PUBLIC_INFURA_ID}`,
-              },
               infuraId: process.env.NEXT_PUBLIC_INFURA_ID,
-              network: "mainnet",
             },
           },
         }}
