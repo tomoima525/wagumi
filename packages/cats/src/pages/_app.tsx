@@ -25,10 +25,10 @@ const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
             package: WalletConnectProvider,
             options: {
               rpc: {
-                4: `https://rinkeby.infura.io/v3/${process.env.NEXT_PUBLIC_INFURA_ID}`,
+                1: `https://mainnet.infura.io/v3/${process.env.NEXT_PUBLIC_INFURA_ID}`,
               },
               infuraId: process.env.NEXT_PUBLIC_INFURA_ID,
-              network: "rinkeby",
+              network: "mainnet",
             },
           },
         }}
