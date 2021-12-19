@@ -8,7 +8,12 @@ const deploy: DeployFunction = async ({
   getNamedAccounts,
   deployments,
   ethers,
+  network,
 }: HardhatRuntimeEnvironment) => {
+  if (network.name === "mainnet" || network.name === "rinkeby") {
+    return;
+  }
+
   const WAGUMI_MULTISIG_ADDRESS = "0xDCE4694e268bD83EA41B335320Ed11A684a1d7dB";
 
   const { deploy } = deployments;
