@@ -31,24 +31,24 @@ export const FooterLogo: FC<FooterLogoProps> = ({
   twitter,
 }) => {
   return (
-    <footer className="px-4 sm:px-6 lg:px-8 pt-6 mx-auto max-w-7xl">
+    <footer className="px-4 sm:px-6 lg:px-8 pt-3 mx-auto max-w-7xl">
       <div className="flex justify-center space-x-6">
         {discord && (
           <FooterIconLink href={discord}>
             <span className="sr-only">Discord</span>
-            <FaDiscord className="w-8 h-8" />
+            <FaDiscord className="w-6 h-6" />
           </FooterIconLink>
         )}
         {github && (
           <FooterIconLink href={github}>
             <span className="sr-only">Github</span>
-            <FaGithub className="w-8 h-8" />
+            <FaGithub className="w-6 h-6" />
           </FooterIconLink>
         )}
         {twitter && (
           <FooterIconLink href={twitter}>
             <span className="sr-only">Twitter</span>
-            <FaTwitter className="w-8 h-8" />
+            <FaTwitter className="w-6 h-6" />
           </FooterIconLink>
         )}
       </div>

@@ -1,6 +1,7 @@
-import { WagumiCatsRinkebyDeployment } from "@wagumi/contracts";
+import { WagumiCatsDeployment } from "@wagumi/contracts";
 import { ERC721_ABI, useContract } from "ethereal-react";
 
+import { Credits } from "@/cats/components/atoms/Credits";
 import { Summary } from "@/cats/components/molecules/Summary";
 import { Minter } from "@/cats/components/organisms/Minter";
 import { FooterLogo } from "@/cats/components/templates/FooterLogo";
@@ -9,7 +10,7 @@ import { DISCORD_URL, GITHUB_URL, TWITTER_URL } from "@/cats/const/social";
 
 export const MintPage = (): JSX.Element => {
   const WagumiCatsDeploymentContract = useContract(
-    WagumiCatsRinkebyDeployment.address,
+    WagumiCatsDeployment.address,
     [...ERC721_ABI],
   );
 
@@ -18,6 +19,7 @@ export const MintPage = (): JSX.Element => {
       <PageHeader title="WAGUMI Cats 🐾" />
       <Summary contract={WagumiCatsDeploymentContract} />
       <Minter contract={WagumiCatsDeploymentContract} />
+      <Credits />
       <FooterLogo
         discord={DISCORD_URL}
         github={GITHUB_URL}

@@ -18,7 +18,7 @@
   "scripts": {
     "build": "yarn run clean && yarn build:sol && yarn build:ts && yarn build:declarations && yarn build:deployments",
     "build:declarations": "shx cp -R typechain dist/typechain",
-    "build:deployments": "shx cp deployments/**/*.json dist/deployments",
+    "build:deployments": "shx cp -R deployments dist/deployments",
     "build:sol": "yarn run compile",
     "build:ts": "tsc -p tsconfig.build.json",
     "clean": "yarn run clean:sol",
