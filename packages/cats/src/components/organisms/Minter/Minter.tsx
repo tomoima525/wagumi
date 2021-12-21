@@ -130,7 +130,7 @@ export const Minter = ({ contract }: { contract: Contract }) => {
         className="p-4 text-3xl hover:bg-gray-300 hover:bg-opacity-30 border-4 border-current"
         disabled={loading}
         onClick={() => {
-          return mint();
+          mint();
         }}
       >
         Mint NFT #{Number(tokenId.toString()) + 1}
