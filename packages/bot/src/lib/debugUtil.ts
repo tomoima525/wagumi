@@ -16,6 +16,7 @@ export const isProd = ENVIRONMENT === "production";
  */
 export const getDebugInfo = function () {
   return {
+    date: Date.now().toLocaleString(),
     isProd: isProd,
     branch: DEPLOY_BRANCH,
     env: ENVIRONMENT,
