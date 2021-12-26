@@ -19,7 +19,7 @@ export const DEPLOY_BRANCH: string = process.env.RAILWAY_GIT_BRANCH || "";
 export const DEV_CHANNEL_ALLOWED_LIST: string[] = process.env
   .DEV_CHANNEL_ALLOWED_LIST
   ? process.env.DEV_CHANNEL_ALLOWED_LIST.split(",")
-  : [];
+  : ["920167819360993330"]; // team-dev-test channel
 export const PROD_CHANNEL_ALLOWED_LIST: string[] = process.env
   .PROD_CHANNEL_ALLOWED_LIST
   ? process.env.PROD_CHANNEL_ALLOWED_LIST.split(",")
