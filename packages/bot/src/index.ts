@@ -35,11 +35,9 @@ client.on("message", async message => {
   }
 
   // development-test channel
-  if (message.content === "!ping") {
+  if (message.content === "!pingy") {
     let messageString = "Pong.";
-    if (!isProd) {
-      messageString = printDebugInfo(messageString);
-    }
+    messageString = printDebugInfo(messageString);
     message.channel.send(messageString);
   }
 });
