@@ -8,6 +8,7 @@
     "module": "commonjs",
     "outDir": "./dist",
     "paths": {
+      "*": ["./packages/contracts/node_modules/*"],
       "@/abi/*": ["./packages/contracts/abi/*"],
       "@/airdrop/*": ["./packages/airdrop/src/*"],
       "@/airdrop/public/*": ["./packages/airdrop/public/*"],
