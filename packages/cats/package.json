@@ -24,7 +24,7 @@
     "@tailwindcss/line-clamp": "^0.3.0",
     "@tailwindcss/typography": "^0.5.0",
     "@wagumi/contracts": "*",
-    "autoprefixer": "^10.4.0",
+    "autoprefixer": "^10.4.2",
     "clsx": "^1.1.1",
     "copy-to-clipboard": "^3.3.1",
     "next": "^12.0.7",
@@ -34,13 +34,13 @@
     "react-dom": "^17.0.2",
     "react-error-boundary": "^3.1.4",
     "react-icons": "^4.3.1",
-    "tailwindcss": "^3.0.7",
-    "web3modal": "^1.9.4"
+    "tailwindcss": "^3.0.12",
+    "web3modal": "^1.9.5"
   },
   "devDependencies": {
-    "@types/react": "^17.0.37",
+    "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
-    "@types/tailwindcss": "^2.2.4",
+    "@types/tailwindcss": "^3.0.2",
     "typescript": "^4.4.4"
   }
 }
