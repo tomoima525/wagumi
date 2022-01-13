@@ -9,7 +9,7 @@ export const Seo: FC = () => {
         noindex={false}
         nofollow={false}
         title={`Wagumi Cats${
-          process.env.NEXT_PUBLIC_VERCEL_ENV !== "production" && " Testnet"
+          process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ? "" : " Testnet"
         }`}
         canonical="https://cats.wagumi.xyz"
         description="Wagumi Cats - NFT Collection for Wagumi DAO"
