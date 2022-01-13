@@ -26,7 +26,7 @@ export const View = ({
       <img className="mt-3 w-[300px] h-[300px]" src={image} alt={name} />
       <a
         href={`${
-          process.env.NEXT_PUBLIC_VERCEL_ENV !== "production" && "testnets."
+          process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ? "" : "testnets."
         }https://opensea.io/assets/${contract.address}/${tokenId}`}
         className="mt-6 text-2xl underline hover:bg-gray-600 hover:cursor-pointer"
         target="_blank"

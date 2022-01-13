@@ -66,9 +66,9 @@ export const FooterLogo: FC<FooterLogoProps> = ({
         </FooterLink>
         <FooterLink
           href={
-            process.env.NEXT_PUBLIC_VERCEL_ENV !==
-              "https://opensea.io/collection/wagumi-cats" &&
-            "https://testnets.opensea.io/collection/wagumi-cats-v3"
+            process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
+              ? "https://opensea.io/collection/wagumi-cats"
+              : "https://testnets.opensea.io/collection/wagumi-cats-v3"
           }
         >
           Opensea
