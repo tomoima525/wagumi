@@ -25,7 +25,9 @@ export const View = ({
       <h3 className="text-6xl text-center">{name}</h3>
       <img className="mt-3 w-[300px] h-[300px]" src={image} alt={name} />
       <a
-        href={`https://opensea.io/assets/${contract.address}/${tokenId}`}
+        href={`${
+          process.env.NEXT_PUBLIC_VERCEL_ENV !== "production" && "testnets."
+        }https://opensea.io/assets/${contract.address}/${tokenId}`}
         className="mt-6 text-2xl underline hover:bg-gray-600 hover:cursor-pointer"
         target="_blank"
         rel="noreferrer"
@@ -69,7 +71,9 @@ export const Minter = ({ contract }: { contract: Contract }) => {
   if (balance.toNumber() !== 0) {
     return (
       <div>
-        <h2 className="text-lg text-center">Minted already</h2>
+        <h2 className="text-4xl text-center text-green-600">
+          Minted already !!!
+        </h2>
       </div>
     );
   }
