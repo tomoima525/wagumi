@@ -68,6 +68,10 @@ export const Minter = ({ contract }: { contract: Contract }) => {
   const tokenId = useTokenId(contract);
   const balance = useTokenBalance(contract);
 
+  useEffect(() => {
+    console.log(process.env.NEXT_PUBLIC_VERCEL_ENV);
+  });
+
   if (balance.toNumber() !== 0) {
     return (
       <div>
