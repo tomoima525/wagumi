@@ -53,7 +53,9 @@ export const FooterLogo: FC<FooterLogoProps> = ({
       <div className="flex justify-center space-x-6">
         <FooterLink
           href={`https://${
-            process.env.NEXT_PUBLIC_VERCEL_ENV !== "production" && "rinkeby."
+            process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
+              ? ""
+              : "rinkeby."
           }etherscan.io/address/${
             process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
               ? WagumiCatsDeployment.address
