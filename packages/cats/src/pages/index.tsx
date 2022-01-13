@@ -9,7 +9,9 @@ export const IndexPage = (): JSX.Element => {
     <>
       <PageHeader
         title={`WAGUMI Cats 🐾${
-          process.env.NEXT_PUBLIC_VERCEL_ENV !== "production" && "Testnet!!!"
+          process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
+            ? ""
+            : "Testnet!!!"
         }`}
       />
       <RandomCat />
