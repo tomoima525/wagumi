@@ -21,7 +21,10 @@ export const SwitchNetwork = () => {
         disabled={loading}
         onClick={switchNetwork}
       >
-        Switch to Mainnet
+        Switch to{" "}
+        {process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
+          ? "Mainnet"
+          : "Rinkeby"}
       </button>
     </Container>
   );
