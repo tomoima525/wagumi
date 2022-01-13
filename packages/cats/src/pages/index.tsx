@@ -7,7 +7,11 @@ import { DISCORD_URL, GITHUB_URL, TWITTER_URL } from "@/cats/const/social";
 export const IndexPage = (): JSX.Element => {
   return (
     <>
-      <PageHeader title="WAGUMI Cats 🐾" />
+      <PageHeader
+        title={`WAGUMI Cats 🐾${
+          process.env.NEXT_PUBLIC_VERCEL_ENV !== "production" && "Testnet!!!"
+        }`}
+      />
       <RandomCat />
       <Credits />
       <FooterLogo
