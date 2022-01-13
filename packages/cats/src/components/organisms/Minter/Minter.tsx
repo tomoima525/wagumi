@@ -1,14 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-
 import type { Contract, ContractTransaction } from "ethereal-react";
 import {
   useWriteContract,
   useWaitForTransaction,
-  useReadContract,
   useTokenBalance,
-  useTokenMetadata,
-  useUserAddress,
 } from "ethereal-react";
 
 import React, { Suspense, useEffect } from "react";
@@ -42,32 +36,6 @@ export const View = ({
   );
 };
 
-export const Mint = ({
-  contract,
-  index,
-}: {
-  contract: Contract;
-  index: number;
-}) => {
-  const address = useUserAddress();
-  const tokenId = useReadContract(
-    contract,
-    "tokenOfOwnerByIndex",
-    address,
-    index,
-  );
-  const metadata = useTokenMetadata(contract, tokenId);
-
-  return (
-    <View
-      contract={contract}
-      name={metadata.name}
-      image={metadata.image}
-      tokenId={tokenId}
-    />
-  );
-};
-
 export const Minted = ({
   transaction,
   contract,
@@ -78,7 +46,6 @@ export const Minted = ({
   tokenId: number;
 }) => {
   const confirmation = useWaitForTransaction(transaction);
-  const metadata = useTokenMetadata(contract, tokenId);
 
   useEffect(() => {
     console.log(confirmation);
@@ -87,8 +54,8 @@ export const Minted = ({
   return (
     <View
       contract={contract}
-      name={metadata.name}
-      image={metadata.image}
+      name={`#${tokenId}`}
+      image={`https://cats.wagumi.xyz/${tokenId}`}
       tokenId={tokenId}
     />
   );
@@ -102,10 +69,7 @@ export const Minter = ({ contract }: { contract: Contract }) => {
   if (balance.toNumber() !== 0) {
     return (
       <div>
-        <h2 className="text-lg text-center">Minted already:</h2>
-        {Array.from({ length: balance.toNumber() }, (_, index) => {
-          return <Mint key={index} index={index} contract={contract} />;
-        })}
+        <h2 className="text-lg text-center">Minted already</h2>
       </div>
     );
   }
@@ -127,7 +91,7 @@ export const Minter = ({ contract }: { contract: Contract }) => {
   return (
     <div className="py-6">
       <button
-        className="p-4 text-3xl hover:bg-gray-300 hover:bg-opacity-30 border-4 border-current"
+        className="p-4 text-3xl hover:bg-gray-300/30 border-4 border-current"
         disabled={loading}
         onClick={e => {
           e.preventDefault();
