@@ -30,7 +30,9 @@ const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
               },
               infuraId: process.env.NEXT_PUBLIC_INFURA_ID,
               network:
-                process.env.VERCEL_ENV === "production" ? "mainnet" : "rinkeby",
+                process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
+                  ? "mainnet"
+                  : "rinkeby",
             },
           },
         }}
@@ -40,7 +42,9 @@ const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
         <ErrorBoundary FallbackComponent={Error}>
           <Suspense fallback={<Loading />}>
             <RequireNetwork
-              chainId={process.env.VERCEL_ENV === "production" ? 1 : 4}
+              chainId={
+                process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ? 1 : 4
+              }
               fallback={<SwitchNetwork />}
             >
               <Component {...pageProps} />

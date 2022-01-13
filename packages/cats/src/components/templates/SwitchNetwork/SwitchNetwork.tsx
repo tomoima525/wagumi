@@ -4,14 +4,14 @@ import { Container } from "@/cats/components/molecules/Container";
 
 export const SwitchNetwork = () => {
   const [switchNetwork, { loading }] = useSwitchNetwork({
-    chainId: process.env.VERCEL_ENV === "production" ? 1 : 4,
+    chainId: process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ? 1 : 4,
   });
 
   return (
     <Container>
       <h3 className="text-5xl">
         The example only supports the{" "}
-        {process.env.VERCEL_ENV === "production"
+        {process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
           ? "Ethereum Mainnet"
           : "Rinkeby Network"}
         .

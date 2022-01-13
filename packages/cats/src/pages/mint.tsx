@@ -13,7 +13,7 @@ import { DISCORD_URL, GITHUB_URL, TWITTER_URL } from "@/cats/const/social";
 
 export const MintPage = (): JSX.Element => {
   const WagumiCatsDeploymentContract = useContract(
-    process.env.VERCEL_ENV === "production"
+    process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
       ? WagumiCatsDeployment.address
       : WagumiCatsRinkebyDeployment.address,
     [...ERC721_ABI, "function mint()"],
@@ -23,7 +23,7 @@ export const MintPage = (): JSX.Element => {
     <>
       <PageHeader
         title={`WAGUMI Cats 🐾${
-          process.env.VERCEL_ENV !== "production" && "Testnet!!!"
+          process.env.NEXT_PUBLIC_VERCEL_ENV !== "production" && "Testnet!!!"
         }`}
       />
       <Summary contract={WagumiCatsDeploymentContract} />
