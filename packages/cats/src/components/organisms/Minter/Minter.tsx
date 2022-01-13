@@ -71,7 +71,9 @@ export const Minter = ({ contract }: { contract: Contract }) => {
   if (balance.toNumber() !== 0) {
     return (
       <div>
-        <h2 className="text-lg text-center">Minted already</h2>
+        <h2 className="text-4xl text-center text-green-600">
+          Minted already !!!
+        </h2>
       </div>
     );
   }
