@@ -8,7 +8,9 @@ export const Seo: FC = () => {
       <Default
         noindex={false}
         nofollow={false}
-        title="Wagumi Cats"
+        title={`Wagumi Cats${
+          process.env.NEXT_PUBLIC_VERCEL_ENV !== "production" && " Testnet"
+        }`}
         canonical="https://cats.wagumi.xyz"
         description="Wagumi Cats - NFT Collection for Wagumi DAO"
         openGraph={{
