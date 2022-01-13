@@ -62,7 +62,13 @@ export const FooterLogo: FC<FooterLogoProps> = ({
         >
           Etherscan
         </FooterLink>
-        <FooterLink href="https://opensea.io/collection/wagumi-cats">
+        <FooterLink
+          href={
+            process.env.NEXT_PUBLIC_VERCEL_ENV !==
+              "https://opensea.io/collection/wagumi-cats" &&
+            "https://testnets.opensea.io/collection/wagumi-cats-v3"
+          }
+        >
           Opensea
         </FooterLink>
       </div>
