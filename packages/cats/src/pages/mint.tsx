@@ -12,6 +12,8 @@ import { PageHeader } from "@/cats/components/templates/PageHeader";
 import { DISCORD_URL, GITHUB_URL, TWITTER_URL } from "@/cats/const/social";
 
 export const MintPage = (): JSX.Element => {
+  console.log(process.env.NEXT_PUBLIC_VERCEL_ENV);
+
   const WagumiCatsDeploymentContract = useContract(
     process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
       ? WagumiCatsDeployment.address
