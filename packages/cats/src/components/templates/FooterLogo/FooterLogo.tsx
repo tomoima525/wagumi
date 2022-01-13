@@ -1,3 +1,7 @@
+import {
+  WagumiCatsDeployment,
+  WagumiCatsRinkebyDeployment,
+} from "@wagumi/contracts";
 import type { FC } from "react";
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 
@@ -45,9 +49,17 @@ export const FooterLogo: FC<FooterLogoProps> = ({
   twitter,
 }) => {
   return (
-    <footer className="py-4 px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
+    <footer className="p-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
       <div className="flex justify-center space-x-6">
-        <FooterLink href="https://etherscan.io/address/0x6144d927ee371de7e7f8221b596f3432e7a8e6d9">
+        <FooterLink
+          href={`https://${
+            process.env.NEXT_PUBLIC_VERCEL_ENV !== "production" && "rinkeby."
+          }etherscan.io/address/${
+            process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
+              ? WagumiCatsDeployment.address
+              : WagumiCatsRinkebyDeployment.address
+          }`}
+        >
           Etherscan
         </FooterLink>
         <FooterLink href="https://opensea.io/collection/wagumi-cats">
