@@ -76,7 +76,7 @@ export const Minter = ({ contract }: { contract: Contract }) => {
 
   if (data) {
     return (
-      <Suspense fallback={<div className="my-2 text-2xl">Minting...</div>}>
+      <Suspense fallback={<div className="my-2 text-4xl">Minting...</div>}>
         <div>
           <Minted
             contract={contract}
