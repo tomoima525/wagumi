@@ -21,7 +21,11 @@ export const MintPage = (): JSX.Element => {
 
   return (
     <>
-      <PageHeader title="WAGUMI Cats 🐾" />
+      <PageHeader
+        title={`WAGUMI Cats 🐾${
+          process.env.VERCEL_ENV !== "production" && "Testnet!!!"
+        }`}
+      />
       <Summary contract={WagumiCatsDeploymentContract} />
       <Minter contract={WagumiCatsDeploymentContract} />
       <Credits />

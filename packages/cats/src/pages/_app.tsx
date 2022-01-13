@@ -26,9 +26,11 @@ const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
             options: {
               rpc: {
                 1: `https://mainnet.infura.io/v3/${process.env.NEXT_PUBLIC_INFURA_ID}`,
+                4: `https://rinkeby.infura.io/v3/${process.env.NEXT_PUBLIC_INFURA_ID}`,
               },
               infuraId: process.env.NEXT_PUBLIC_INFURA_ID,
-              network: "mainnet",
+              network:
+                process.env.VERCEL_ENV === "production" ? "mainnet" : "rinkeby",
             },
           },
         }}
@@ -37,7 +39,10 @@ const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
       >
         <ErrorBoundary FallbackComponent={Error}>
           <Suspense fallback={<Loading />}>
-            <RequireNetwork chainId={1} fallback={<SwitchNetwork />}>
+            <RequireNetwork
+              chainId={process.env.VERCEL_ENV === "production" ? 1 : 4}
+              fallback={<SwitchNetwork />}
+            >
               <Component {...pageProps} />
             </RequireNetwork>
           </Suspense>
