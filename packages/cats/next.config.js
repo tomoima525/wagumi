@@ -8,6 +8,9 @@ module.exports = withTM({
   eslint: {
     ignoreDuringBuilds: true,
   },
+  publicRuntimeConfig: {
+    NEXT_PUBLIC_VERCEL_ENV: process.env.NEXT_PUBLIC_VERCEL_ENV,
+  },
   async rewrites() {
     return {
       beforeFiles: [
