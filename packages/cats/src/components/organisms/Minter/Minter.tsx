@@ -102,7 +102,7 @@ export const Minter = ({ contract }: { contract: Contract }) => {
           mint();
         }}
       >
-        Mint NFT #{Number(tokenId.toString()) + 1}
+        Mint NFT #{Number(tokenId.toString())}
       </button>
     </div>
   );
