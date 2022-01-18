@@ -20,14 +20,18 @@ export const Error = ({ error, resetErrorBoundary }: FallbackProps) => {
         <p className="overflow-hidden max-w-full text-lg text-center text-red-700 line-clamp-5">
           An internal error was detected, but MINT may have been
           successful.Please check your transaciton log
+          内部エラーが発生しました。しかし、MINTはおそらく成功しています。
+          MetaMaskやEtherscanでMINTトランザクションのログを確認してください。
         </p>
       )}
-      <button
-        className="p-3 mt-8 text-3xl text-white border-2"
-        onClick={resetErrorBoundary}
-      >
-        Try again
-      </button>
+      {!showAdditionalMessage && (
+        <button
+          className="p-3 mt-8 text-3xl text-white border-2"
+          onClick={resetErrorBoundary}
+        >
+          Try again
+        </button>
+      )}
     </>
   );
 };
