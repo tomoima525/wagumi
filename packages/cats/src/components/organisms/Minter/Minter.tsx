@@ -80,7 +80,25 @@ export const Minter = ({ contract }: { contract: Contract }) => {
 
   if (data) {
     return (
-      <Suspense fallback={<div className="my-2 text-2xl">Minting...</div>}>
+      <Suspense
+        fallback={
+          <>
+            <div className="my-2 text-2xl">Minting...</div>
+            <div className="my-3">
+              Please check{" "}
+              <a
+                className="underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://etherscan.io/address/0x6144D927EE371de7e7f8221b596F3432E7A8e6D9"
+              >
+                here
+              </a>{" "}
+              for more information
+            </div>
+          </>
+        }
+      >
         <div>
           <Minted
             contract={contract}
