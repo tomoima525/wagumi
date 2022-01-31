@@ -6,9 +6,20 @@
 
 ## Local development
 
-### Prerequisite w/ M1 Mac
+### Prerequisite 
 
-You may need the following packages:
+You need to install [git-lfs](https://git-lfs.github.com/) to clone this project.
+
+For Mac, run the commands below before cloning.
+
+```
+brew install git-lfs
+git lfs install
+```
+
+
+
+If you are using M1 Mac, you may need the following packages:
 
 - pkg-config
 - pixman
