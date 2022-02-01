@@ -1,1 +1,12 @@
-.gitignore
+# Next.js build output
+.next
+out
+
+# Ignore all Markdown files
+*.md
+
+# Generated files of Contracts
+artifacts
+cache
+typechain
+packages/**/dist
