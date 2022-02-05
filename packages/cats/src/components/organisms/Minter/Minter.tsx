@@ -110,18 +110,5 @@ export const Minter = ({ contract }: { contract: Contract }) => {
     );
   }
 
-  return (
-    <div className="py-6">
-      <button
-        className="p-4 text-3xl hover:bg-gray-300/30 border-4 border-current"
-        disabled={loading}
-        onClick={e => {
-          e.preventDefault();
-          mint();
-        }}
-      >
-        Mint NFT #{Number(tokenId.toString())}
-      </button>
-    </div>
-  );
+  return <div className="py-6" />;
 };
